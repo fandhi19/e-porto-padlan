@@ -1,0 +1,553 @@
+/* === TEMA: CINEMATIC SPORTS BRAND === */
+:root {
+  --bg-dark: #090a0f;
+  --bg-card: #151821;
+  --volt: #ccff00;
+  --red-action: #ff2a2a;
+  --text-main: #f0f4f8;
+  --text-dim: #9ba3af;
+
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.text-volt {
+  color: var(--volt) !important;
+}
+.text-red {
+  color: var(--red-action) !important;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.text-center {
+  text-align: center;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.relative-z {
+  position: relative;
+  z-index: 10;
+}
+
+/* === BACKGROUND TACTICAL GRID === */
+.tactical-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(9, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--volt);
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--text-main);
+  gap: 10px;
+}
+
+.univ-logo {
+  width: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--volt);
+}
+
+/* Dropdown Menu Dynamic Style */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background: var(--bg-card);
+  border-left: 3px solid var(--volt);
+  list-style: none;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: translateY(10px) skewX(-5deg);
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) skewX(-5deg);
+}
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+  transform: skewX(5deg);
+}
+.dropdown-menu a:hover {
+  background: var(--volt);
+  color: var(--bg-dark);
+  padding-left: 25px;
+}
+.menu-toggle {
+  display: none;
+  color: var(--volt);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  overflow: hidden;
+}
+.hero-bg-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 20vw;
+  color: rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+  z-index: -1;
+  font-style: italic;
+  pointer-events: none;
+}
+.badge-sport {
+  display: inline-block;
+  background: var(--volt);
+  color: var(--bg-dark);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  transform: skewX(-15deg);
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-size: 5rem;
+  margin-bottom: 15px;
+}
+.line-through {
+  text-decoration: line-through;
+  text-decoration-color: var(--red-action);
+  text-decoration-thickness: 5px;
+}
+.hero-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+/* === GALLERY SECTION & FILTER CONTROLS === */
+.gallery-section {
+  padding: 40px 0 100px;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.filter-btn-sport {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  cursor: pointer;
+  transform: skewX(-10deg);
+  transition: var(--transition);
+}
+.filter-btn-sport span {
+  display: block;
+  transform: skewX(10deg);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 1px;
+}
+.filter-btn-sport:hover {
+  border-color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+.filter-btn-sport.active {
+  background: var(--volt);
+  border-color: var(--volt);
+}
+.filter-btn-sport.active span {
+  color: var(--bg-dark);
+  font-weight: 800;
+}
+
+/* === GALLERY BRUTALIST GRID === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery-card-sport {
+  background: var(--bg-card);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  transform: skewX(-2deg);
+  overflow: hidden;
+  transition: var(--transition);
+  opacity: 1;
+  display: block;
+}
+.gallery-card-sport:hover {
+  transform: translateY(-10px) skewX(-2deg);
+  border-color: var(--volt);
+  box-shadow: -10px 10px 0px rgba(204, 255, 0, 0.1);
+}
+
+/* Card Media Frame */
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: skewX(2deg) scale(1.05);
+  transition: var(--transition);
+}
+.gallery-card-sport:hover .card-media img {
+  transform: skewX(2deg) scale(1.15);
+}
+
+/* Sharp Badges */
+.card-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: var(--bg-dark);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  transform: skewX(-10deg);
+  letter-spacing: 1px;
+  z-index: 2;
+}
+.bg-volt {
+  background: var(--volt);
+}
+.bg-red {
+  background: var(--red-action);
+  color: var(--text-main);
+}
+
+/* Card Body Content */
+.card-info {
+  padding: 25px 20px;
+  transform: skewX(2deg);
+}
+.card-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+.gallery-card-sport:hover .card-info h3 {
+  color: var(--volt);
+}
+.card-info p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* === FOOTER SPORTY === */
+.footer-sport {
+  background: #000;
+  padding: 80px 0 20px;
+  border-top: 5px solid var(--volt);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.footer-brand p {
+  max-width: 90%;
+  color: var(--text-dim);
+}
+
+.social-sport {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-sport a {
+  width: 45px;
+  height: 45px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transform: skewX(-10deg);
+  transition: 0.3s;
+}
+.social-sport a:hover {
+  background: var(--volt);
+  color: var(--bg-dark);
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--volt);
+}
+.footer-links a {
+  display: block;
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.footer-links a:hover {
+  color: var(--text-main);
+  transform: translateX(10px);
+}
+
+/* Formating Kontak (Kolom 4) */
+.contact-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.contact-item i {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+.contact-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text-main);
+  letter-spacing: 1px;
+}
+.contact-item p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-dark);
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    text-align: center;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    border-left: none;
+    border-top: 2px solid var(--volt);
+    margin-top: 10px;
+    display: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .filter-controls {
+    gap: 10px;
+  }
+  .filter-btn-sport {
+    width: 100%;
+    transform: none;
+  }
+  .filter-btn-sport span {
+    transform: none;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-card-sport {
+    transform: none;
+  }
+  .gallery-card-sport:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+  }
+  .card-media img {
+    transform: none;
+  }
+  .gallery-card-sport:hover .card-media img {
+    transform: scale(1.1);
+  }
+  .card-info {
+    transform: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contact-item {
+    justify-content: center;
+    text-align: left;
+  }
+}

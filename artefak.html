@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artefak Produk | E-Portofolio PPG Calon Guru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/artefak.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="tactical-grid"></div>
+
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <img src="logo.png" alt="Logo Universitas" class="univ-logo" />
+          <span>E-PORTOFOLIO <span class="text-volt">PPG.</span></span>
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">BERANDA</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link active">PORTFOLIO 1 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="profil.html">Profil Mahasiswa</a>
+              </li>
+              <li>
+                <a href="artefak.html" style="background: var(--volt); color: var(--bg-dark)">Artefak Produk</a>
+              </li>
+              <li><a href="penilaian.html">Penilaian GP</a></li>
+              <li><a href="modelguru.html">Model Guru</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">PORTFOLIO 2 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="refleksi.html">Refleksi Akhir</a></li>
+              <li><a href="filosofi.html">Filosofi Mengajar</a></li>
+            </ul>
+          </li>
+          <li><a href="dokumentasi.html" class="nav-link">DOKUMENTASI</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="artefak-main">
+      <section class="hero-section hero-artefak">
+        <div class="hero-bg-text">ARTEFAK</div>
+        <div class="container text-center relative-z">
+          <div class="badge-sport reveal"><i class="fa-solid fa-layer-group"></i> RUANG KARYA E-PORTOFOLIO 1</div>
+          <h1 class="hero-title reveal">
+            ARTEFAK & <br />
+            <span class="text-volt line-through">PERANGKAT</span> PEMBELAJARAN
+          </h1>
+          <p class="hero-desc mx-auto reveal">Eksplorasi dokumen rancangan pembelajaran PJOK beserta analisis reflektif mengenai kendala, landasan teori, faktor keberhasilan, dan adaptabilitas ruang kelas berbasis digital.</p>
+        </div>
+      </section>
+
+      <section class="document-section">
+        <div class="container">
+          <div class="doc-identity-grid reveal">
+            <div class="doc-card card-volt">
+              <i class="fa-solid fa-laptop-code text-dark card-icon"></i>
+              <label class="text-dark">Mahasiswa</label>
+              <h4 class="text-dark">Padlan Holik, S.Pd</h4>
+            </div>
+            <div class="doc-card">
+              <i class="fa-solid fa-book text-volt card-icon"></i>
+              <label>Mata Pelajaran</label>
+              <h4>PJOK (Penjasorkes)</h4>
+            </div>
+            <div class="doc-card">
+              <i class="fa-solid fa-school text-volt card-icon"></i>
+              <label>Sekolah Mitra</label>
+              <h4>SMKN 3 Kasihan</h4>
+            </div>
+            <div class="doc-card">
+              <i class="fa-solid fa-users-viewfinder text-volt card-icon"></i>
+              <label>Fase / Kelas</label>
+              <h4>Fase E / Kelas X</h4>
+            </div>
+          </div>
+
+          <div class="pdf-container-sport reveal">
+            <div class="tab-buttons">
+              <button class="tab-btn active" onclick="openPdfTab(event, 'tab-modul')"><i class="fa-solid fa-book-open"></i> MODUL AJAR</button>
+              <button class="tab-btn" onclick="openPdfTab(event, 'tab-lkpd')"><i class="fa-solid fa-clipboard-list"></i> LKPD</button>
+              <button class="tab-btn" onclick="openPdfTab(event, 'tab-rubrik')"><i class="fa-solid fa-spell-check"></i> OBSERVASI</button>
+            </div>
+
+            <div class="pdf-wrapper-border">
+              <!-- TAB MODUL AJAR -->
+              <div id="tab-modul" class="tab-content active" style="display: block">
+                <div class="pdf-title">📘 Modul Ajar Permainan Bola Basket</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/Modul Permainan Bola Basket.pdf" title="Modul Permainan Bola Basket" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/Modul Permainan Bola Basket.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/Modul Permainan Bola Basket.pdf" download="Modul_Ajar_Permainan_Bola_Basket.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+
+                <div class="pdf-title" style="margin-top: 80px">📘 Modul Ajar Permainan Sepak Bola</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/Modul Permainan Sepak Bola.pdf" title="Modul Permainan Sepak Bola" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/Modul Permainan Sepak Bola.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/Modul Permainan Sepak Bola.pdf" download="Modul_Ajar_Permainan_Sepak_Bola.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+
+                <div class="pdf-title" style="margin-top: 80px">📘 Modul Ajar Permainan Bola Voli</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/Modul Permainan Bola Voli.pdf" title="Modul Permainan Bola Voli" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/Modul Permainan Bola Voli.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/Modul Permainan Bola Voli.pdf" download="Modul_Ajar_Permainan_Bola_Voli.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+              </div>
+
+              <!-- TAB LKPD -->
+              <div id="tab-lkpd" class="tab-content">
+                <div class="pdf-title">📝 LKPD Bola Basket</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/LKPD Basket.pdf" title="LKPD Bola Basket" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/LKPD Basket.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/LKPD Basket.pdf" download="LKPD_Bola_Basket.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+
+                <div class="pdf-title" style="margin-top: 80px">📝 LKPD Sepak Bola</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/LKPD Sepak Bola.pdf" title="LKPD Sepak Bola" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/LKPD Sepak Bola.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/LKPD Sepak Bola.pdf" download="LKPD_Sepak_Bola.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+
+                <div class="pdf-title" style="margin-top: 80px">📝 LKPD Bola Voli</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/LKPD Voli.pdf" title="LKPD Voli" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/LKPD Voli.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/LKPD Voli.pdf" download="LKPD_Voli.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+              </div>
+
+              <!-- TAB OBSERVASI -->
+              <div id="tab-rubrik" class="tab-content">
+                <div class="pdf-title">🔍 Observasi Manajemen Sekolah</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/Observasi 1.pdf" title="Observasi Manajemen Sekolah" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/Observasi 1.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/Observasi 1.pdf" download="Observasi_Manajemen_Sekolah.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+
+                <div class="pdf-title" style="margin-top: 80px">🔍 Observasi Lingkungan Belajar</div>
+                <div class="pdf-frame">
+                  <iframe src="Dokumen/Observasi 2.pdf" title="Observasi Lingkungan Belajar" loading="lazy"></iframe>
+                </div>
+                <div class="doc-actions">
+                  <a href="Dokumen/Observasi 2.pdf" target="_blank" class="btn-volt"> <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN </a>
+                  <a href="Dokumen/Observasi 2.pdf" download="Observasi_Lingkungan_Belajar.pdf" class="btn-outline"> <i class="fa-solid fa-download"></i> UNDUH BERKAS </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slanted-section analysis-section">
+        <div class="container">
+          <div class="section-header text-center reveal">
+            <h2>ANALISIS & <span class="text-volt">REFLEKSI ARTEFAK</span></h2>
+            <div class="header-line"></div>
+            <p style="margin-top: 15px; color: var(--text-dim)">Tinjauan analitis mendalam dari 4 aspek esensial selama penyusunan dan implementasi produk.</p>
+          </div>
+
+          <div class="comp-grid">
+            <div class="comp-card reveal">
+              <div class="comp-number">01</div>
+              <i class="fa-solid fa-triangle-exclamation text-volt" style="font-size: 2rem; margin-bottom: 15px"></i>
+              <h3>KENDALA PENYUSUNAN</h3>
+              <p>
+                Tantangan utama dalam penyusunan produk pembelajaran adalah merancang diferensiasi tugas gerak yang mampu mengakomodasi
+                <strong class="text-main">tingkat kebugaran dan kemampuan motorik siswa yang sangat beragam</strong>
+                di dalam satu kelas. Mengatur alokasi waktu secara presisi juga menjadi kendala adaptif.
+              </p>
+            </div>
+
+            <div class="comp-card card-volt reveal">
+              <div class="comp-number">02</div>
+              <i class="fa-solid fa-brain text-dark" style="font-size: 2rem; margin-bottom: 15px"></i>
+              <h3 class="text-dark">TEORI & KONSEP</h3>
+              <p class="text-dark" style="font-weight: 600">
+                Penyusunan ini mengadopsi model
+                <em>Teaching Games for Understanding (TGfU)</em> dan <em>Differentiated Instruction</em>. TGfU diaplikasikan untuk membangun pemahaman taktis, sementara diferensiasi memastikan setiap siswa terfasilitasi sesuai zona ZPD
+                mereka.
+              </p>
+            </div>
+
+            <div class="comp-card reveal">
+              <div class="comp-number">03</div>
+              <i class="fa-solid fa-ranking-star text-volt" style="font-size: 2rem; margin-bottom: 15px"></i>
+              <h3>FAKTOR KEBERHASILAN</h3>
+              <p>
+                Faktor utama keberhasilan terletak pada
+                <strong class="text-main">instruksi yang jelas dan terstruktur</strong>
+                serta media visual di awal sesi. Modifikasi alat (bola lebih ringan) secara signifikan menurunkan tingkat kecemasan siswa, sehingga <em>Time on Task</em> meningkat tajam.
+              </p>
+            </div>
+
+            <div class="comp-card reveal">
+              <div class="comp-number">04</div>
+              <i class="fa-solid fa-sliders text-volt" style="font-size: 2rem; margin-bottom: 15px"></i>
+              <h3>ADAPTABILITAS</h3>
+              <p>
+                Dirancang dengan fleksibilitas tinggi. Jika dihadapkan pada cuaca buruk, komponen dapat diubah ke metode
+                <em>Station Teaching</em> di area tertutup (selasar). Aturan permainan dapat dikondisikan agar menuntut keaktifan fisik secara maksimal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-sport">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2 class="footer-logo">PPG <span class="text-volt">UNY.</span></h2>
+            <p>Mendidik dengan hati, bergerak dengan inovasi. Rekam jejak akademik guru PJOK masa depan.</p>
+            <div class="social-sport">
+              <a href="https://www.instagram.com/padlanholik/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:padlanholik2001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>PORTFOLIO 1</h3>
+            <a href="profil.html">Profil Mahasiswa</a>
+            <a href="artefak.html">Artefak Produk</a>
+            <a href="penilaian.html">Penilaian GP</a>
+            <a href="modelguru.html">Model Guru</a>
+          </div>
+
+          <div class="footer-links">
+            <h3>PORTFOLIO 2</h3>
+            <a href="refleksi.html">Refleksi Akhir</a>
+            <a href="filosofi.html">Filosofi Mengajar</a>
+            <a href="dokumentasi.html">Galeri Aktivitas</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>INFO & KONTAK</h3>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot text-volt"></i>
+              <div>
+                <span class="contact-label">LOKASI LPTK</span>
+                <p>FIK Universitas Negeri Yogyakarta</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope text-volt"></i>
+              <div>
+                <span class="contact-label">EMAIL AKADEMIK</span>
+                <p>padlanholik2001@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 E-Portofolio PPG UNY | Dirancang oleh Padlan Holik</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tab System dengan Fade Effect
+      function openPdfTab(evt, tabName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+          tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        const activeTab = document.getElementById(tabName);
+        activeTab.style.display = "block";
+        setTimeout(() => activeTab.classList.add("active"), 10);
+        evt.currentTarget.classList.add("active");
+      }
+
+      // Sticky Navbar
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile Menu
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+      mobileMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        const icon = mobileMenu.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.className = "fa-solid fa-xmark";
+        } else {
+          icon.className = "fa-solid fa-bars-staggered";
+        }
+      });
+
+      // Scroll Reveal Animation
+      function triggerReveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 80) {
+            element.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", triggerReveal);
+      window.addEventListener("load", triggerReveal);
+    </script>
+  </body>
+</html>

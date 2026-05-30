@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian Guru Pamong | E-Portofolio PPG Calon Guru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/penilaian.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="tactical-grid"></div>
+
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <img src="logo.png" alt="Logo UNY" class="univ-logo" />
+          <span>E-PORTOFOLIO <span class="text-volt">PPG.</span></span>
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">BERANDA</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link active">PORTFOLIO 1 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="profil.html">Profil Mahasiswa</a></li>
+              <li><a href="artefak.html">Artefak Produk</a></li>
+              <li>
+                <a href="penilaian.html" style="color: var(--bg-dark); background: var(--volt); padding-left: 25px">Penilaian GP</a>
+              </li>
+              <li><a href="modelguru.html">Model Guru</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">PORTFOLIO 2 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="refleksi.html">Refleksi Akhir</a></li>
+              <li><a href="filosofi.html">Filosofi Mengajar</a></li>
+            </ul>
+          </li>
+          <li><a href="dokumentasi.html" class="nav-link">DOKUMENTASI</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="penilaian-main">
+      <section class="hero-section">
+        <div class="hero-bg-text">PENILAIAN</div>
+        <div class="container text-center relative-z">
+          <div class="badge-sport reveal"><i class="fa-solid fa-clipboard-check"></i> PENILAIAN PPL TERBIMBING</div>
+          <h1 class="hero-title reveal">PENILAIAN <br /><span class="text-volt line-through">GURU PAMONG</span></h1>
+          <p class="hero-desc mx-auto reveal">
+            Dokumentasi autentik hasil penilaian dari Guru Pamong yang mencakup evaluasi rancangan perangkat pembelajaran (Lampiran 7) dan observasi praktik mengajar di lapangan selama 3 siklus (Lampiran 8).
+          </p>
+        </div>
+      </section>
+
+      <section class="slanted-section">
+        <div class="container">
+          <div class="showcase-grid reverse reveal">
+            <div class="pdf-panel-sport">
+              <div class="pdf-header-tag"><i class="fa-solid fa-file-pdf text-volt"></i> PRATINJAU LAMPIRAN 7</div>
+
+              <div id="siklus-1" class="pdf-content-cycle active">
+                <div class="pdf-wrapper-border">
+                  <iframe src="Dokumen/Lampiran 7  PPLT SILUS 1.pdf" title="Lampiran 7 Siklus 1" loading="lazy"></iframe>
+                </div>
+                <a href="Dokumen/Lampiran 7  PPLT SILUS 1.pdf" target="_blank" class="btn-volt w-100 text-center mt-20"> <i class="fa-solid fa-up-right-from-square"></i> BUKA LAYAR PENUH (SIKLUS 1) </a>
+              </div>
+
+              <div id="siklus-2" class="pdf-content-cycle">
+                <div class="pdf-wrapper-border">
+                  <iframe src="Dokumen/Lampiran 7  PPLT SILUS 2.pdf" title="Lampiran 7 Siklus 2" loading="lazy"></iframe>
+                </div>
+                <a href="Dokumen/Lampiran 7  PPLT SILUS 2.pdf" target="_blank" class="btn-volt w-100 text-center mt-20"> <i class="fa-solid fa-up-right-from-square"></i> BUKA LAYAR PENUH (SIKLUS 2) </a>
+              </div>
+            </div>
+
+            <div class="info-panel-sport">
+              <div class="panel-header-sport">
+                <div class="badge-brutal">Lampiran 7</div>
+                <h3>Penyusunan Perangkat Pembelajaran (3 Siklus)</h3>
+                <div class="header-line"></div>
+              </div>
+              <p class="panel-desc-sport">
+                Instrumen ini merupakan lembar penilaian dari
+                <strong>Guru Pamong</strong> yang difokuskan pada kualitas, kelengkapan, dan kesesuaian rancangan Modul Ajar serta perangkat pendukung (LKPD, Media, Rubrik) sebelum diimplementasikan di dalam kelas kelas X.
+              </p>
+
+              <div class="highlight-box-sport">
+                <i class="fa-solid fa-check-double text-volt box-icon"></i>
+                <div>
+                  <h4>Fokus Penilaian:</h4>
+                  <p>Kesesuaian capaian pembelajaran, integrasi Profil Pelajar Pancasila, dan diferensiasi tugas gerak fisik siswa.</p>
+                </div>
+              </div>
+
+              <div class="cycle-tabs-wrapper-sport">
+                <h4 class="tab-instruction-sport">PILIH SIKLUS EVALUASI:</h4>
+                <div class="cycle-tabs-sport">
+                  <button class="cycle-btn-sport active" onclick="switchCycle(event, 'siklus-1')">SIKLUS 1</button>
+                  <button class="cycle-btn-sport" onclick="switchCycle(event, 'siklus-2')">SIKLUS 2</button>
+                </div>
+              </div>
+
+              <div class="action-box-sport">
+                <a href="Dokumen/Lampiran 7 All.pdf" download="Lampiran7_PenyusunanPerangkatPembelajaran.pdf" class="btn-outline w-100 text-center"> <i class="fa-solid fa-download"></i> UNDUH SEMUA SIKLUS </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <div class="container">
+          <div class="showcase-grid reveal">
+            <div class="info-panel-sport">
+              <div class="panel-header-sport">
+                <div class="badge-brutal">Lampiran 8</div>
+                <h3>Praktik Mengajar</h3>
+                <div class="header-line"></div>
+              </div>
+              <p class="panel-desc-sport">
+                Dokumentasi penilaian dari <strong>Guru Pamong</strong> terhadap performa pengajaran nyata di lapangan olahraga. Evaluasi mencakup kompetensi pedagogi, penguasaan materi esensial, manajemen lapangan kelas, hingga keselamatan
+                gerak peserta didik.
+              </p>
+
+              <div class="action-box-sport">
+                <a href="Dokumen/Lampiran 8.pdf" download="Lampiran8_PraktikMengajar.pdf" class="btn-outline w-100 text-center"> <i class="fa-solid fa-download"></i> UNDUH LAMPIRAN 8 </a>
+              </div>
+            </div>
+
+            <div class="pdf-panel-sport">
+              <div class="pdf-header-tag"><i class="fa-solid fa-file-pdf text-volt"></i> PRATINJAU DOKUMEN LAMPIRAN 8</div>
+              <div class="pdf-wrapper-border">
+                <iframe src="Dokumen/Lampiran 8.pdf" title="Instrumen Penilaian Praktik Mengajar" loading="lazy"></iframe>
+              </div>
+              <a href="Dokumen/Lampiran 8.pdf" target="_blank" class="btn-volt w-100 text-center mt-20"> <i class="fa-solid fa-up-right-from-square"></i> BUKA LAYAR PENUH </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-sport">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2 class="footer-logo">PPG <span class="text-volt">UNY.</span></h2>
+            <p>Mendidik dengan hati, bergerak dengan inovasi. Rekam jejak akademik guru PJOK masa depan.</p>
+            <div class="social-sport">
+              <a href="https://www.instagram.com/padlanholik/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:padlanholik2001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>PORTFOLIO 1</h3>
+            <a href="profil.html">Profil Mahasiswa</a>
+            <a href="artefak.html">Artefak Produk</a>
+            <a href="penilaian.html">Penilaian GP</a>
+            <a href="modelguru.html">Model Guru</a>
+          </div>
+
+          <div class="footer-links">
+            <h3>PORTFOLIO 2</h3>
+            <a href="refleksi.html">Refleksi Akhir</a>
+            <a href="filosofi.html">Filosofi Mengajar</a>
+            <a href="dokumentasi.html">Galeri Aktivitas</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>INFO & KONTAK</h3>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot text-volt"></i>
+              <div>
+                <span class="contact-label">LOKASI LPTK</span>
+                <p>FIK Universitas Negeri Yogyakarta</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope text-volt"></i>
+              <div>
+                <span class="contact-label">EMAIL AKADEMIK</span>
+                <p>padlanholik2001@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 E-Portofolio PPG UNY | Dirancang oleh Padlan Holik</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // 1. Logika Tab Interaktif PDF dengan Transisi Smooth Fade
+      function switchCycle(evt, cycleName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("pdf-content-cycle");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+          tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("cycle-btn-sport");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        const activeTab = document.getElementById(cycleName);
+        activeTab.style.display = "block";
+        setTimeout(() => activeTab.classList.add("active"), 10);
+        evt.currentTarget.classList.add("active");
+      }
+      // Set Default display berkas
+      document.getElementById("siklus-1").style.display = "block";
+
+      // 2. Navbar Sticky Effect
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      // 3. Mobile Menu Toggle
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+      mobileMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        const icon = mobileMenu.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.className = "fa-solid fa-xmark";
+        } else {
+          icon.className = "fa-solid fa-bars-staggered";
+        }
+      });
+
+      // 4. Scroll Reveal Entrance Animation
+      function triggerReveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 80) {
+            element.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", triggerReveal);
+      window.addEventListener("load", triggerReveal);
+    </script>
+  </body>
+</html>
