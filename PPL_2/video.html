@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Pembelajaran 4 Siklus | E-Portofolio PPG UNY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../CSS/rancangan.css" />
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="tactical-grid"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-brand">
+          <img src="../logo.png" alt="Logo Universitas" class="univ-logo" />
+          <span>E-PORTOFOLIO <span class="text-volt">PPG.</span></span>
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html" class="nav-link">BERANDA</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">JEJAK PPL 1 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../PPL_1/profil.html">Profil Mahasiswa</a></li>
+              <li><a href="../PPL_1/artefak.html">Artefak Produk</a></li>
+              <li><a href="../PPL_1/penilaian.html">Penilaian GP</a></li>
+              <li><a href="../PPL_1/modelguru.html">Model Guru</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link active">JEJAK PPL 2 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="rancangan.html">Rancangan Pembelajaran</a></li>
+              <li><a href="materi.html">Materi Pembelajaran</a></li>
+              <li><a href="media.html">Media Pembelajaran</a></li>
+              <li><a href="video.html" style="background: var(--volt); color: var(--bg-dark)">Video Pembelajaran</a></li>
+              <li><a href="instrumen.html">Instrumen Pembelajaran</a></li>
+              <li><a href="non-mengajar.html">Kegiatan Non-Mengajar</a></li>
+            </ul>
+          </li>
+          <li><a href="../filosofi.html" class="nav-link">FILOSOFI</a></li>
+          <li><a href="../refleksi.html" class="nav-link">REFLEKSI</a></li>
+          <li><a href="../dokumentasi.html" class="nav-link">DOKUMENTASI</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="hero-bg-text">VIDEO PRAKTIK</div>
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="badge-sport"><i class="fa-solid fa-video"></i> PPL MANDIRI • SMKN 3 KASIHAN • PJOK</div>
+          <h1 class="hero-title">
+            VIDEO <br />
+            <span class="text-volt line-through">PEMBELAJARAN</span>
+          </h1>
+          <p class="hero-desc">
+            Dokumentasi rekaman visual pelaksanaan praktik pembelajaran nyata 4 Siklus selama <strong>PPL Mandiri (PPL 2)</strong> di SMKN 3 Kasihan. Dikelompokkan ke dalam evaluasi <strong>UTS (Siklus 1)</strong> dan <strong>UAS (Siklus 2, 3, dan 4)</strong>, dilengkapi penampil video responsif, penanda linimasa (*timeline*), serta telaah analisis kritis pedagogik.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIKLUS SELECTOR & GROUPING (UTS / UAS) -->
+    <section class="siklus-nav-section">
+      <div class="container">
+        <div class="siklus-group-container reveal">
+          <div class="group-header">
+            <div class="group-title-tag">
+              <i class="fa-solid fa-clapperboard text-volt" style="font-size: 1.5rem"></i>
+              <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 2px">NAVIGASI VIDEO PRAKTIK 4 SIKLUS</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim)">Pilih siklus untuk memutar video rekaman mengajar dan membaca telaah refleksinya</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <span class="badge-eval badge-uts"><i class="fa-solid fa-bookmark"></i> UTS: SIKLUS 1</span>
+              <span class="badge-eval badge-uas"><i class="fa-solid fa-flag-checkered"></i> UAS: SIKLUS 2, 3, 4</span>
+            </div>
+          </div>
+
+          <div class="cycle-tabs-container">
+            <!-- TAB SIKLUS 1 (UTS) -->
+            <button class="cycle-tab-btn active" onclick="switchSiklus(event, 'panel-siklus-1')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uts">UTS</span>
+                <i class="fa-solid fa-basketball text-volt"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 1</span>
+              <span class="tab-cycle-topic">Video Bola Basket • Taktik & Fastbreak</span>
+            </button>
+
+            <!-- TAB SIKLUS 2 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-2')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-volleyball text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 2</span>
+              <span class="tab-cycle-topic">Video Bola Voli • Passing & Formasi</span>
+            </button>
+
+            <!-- TAB SIKLUS 3 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-3')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-futbol text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 3</span>
+              <span class="tab-cycle-topic">Video Sepak Bola • Small-Sided Games</span>
+            </button>
+
+            <!-- TAB SIKLUS 4 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-4')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-heart-pulse text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 4</span>
+              <span class="tab-cycle-topic">Video Kebugaran • Circuit Training</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN INTERACTIVE CYCLE PANELS -->
+    <main class="container">
+
+      <!-- ==============================================
+           PANEL SIKLUS 1 (UTS)
+           ============================================== -->
+      <div id="panel-siklus-1" class="cycle-panel active">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uts"><i class="fa-solid fa-star"></i> EVALUASI UTS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-basketball"></i> Praktik Mengajar Bola Basket</span>
+            <span class="chip"><i class="fa-solid fa-clock"></i> Durasi: 28 Menit (Full Edit)</span>
+          </div>
+          <h2>SIKLUS 1: VIDEO PRAKTIK PEMBELAJARAN BOLA BASKET</h2>
+          <p>
+            Rekaman pelaksanaan pembelajaran Siklus 1 yang memvisualisasikan tahapan apersepsi berbasis TPACK, pemanasan dinamis, instruksi pola passing dada dan pantul, hingga implementasi permainan taktis 3 on 3 di lapangan terbuka SMKN 3 Kasihan.
+          </p>
+        </div>
+
+        <!-- Video Player Section -->
+        <section class="video-viewer-section reveal">
+          <div class="video-viewer-card">
+            <div class="video-card-header">
+              <div class="video-title-info">
+                <div class="video-icon-square"><i class="fa-brands fa-youtube"></i></div>
+                <div>
+                  <h3>REKAMAN VIDEO SIKLUS 1 (BOLA BASKET)</h3>
+                  <span>Dokumentasi Pelaksanaan Praktik Mengajar PJOK • Evaluasi UTS</span>
+                </div>
+              </div>
+              <div class="video-action-buttons">
+                <a href="https://www.youtube.com" target="_blank" class="btn-volt">
+                  <i class="fa-brands fa-youtube"></i> TONTON DI YOUTUBE
+                </a>
+                <a href="../Dokumen/Modul Permainan Bola Basket.pdf" target="_blank" class="btn-outline">
+                  <i class="fa-solid fa-file-pdf"></i> DOKUMEN MODUL
+                </a>
+              </div>
+            </div>
+
+            <!-- Video Responsive Frame -->
+            <div class="video-frame-wrapper">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                title="Video Praktik Siklus 1 Bola Basket"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <!-- Video Timeline Box -->
+            <div class="video-timeline-box">
+              <div class="video-timeline-title">
+                <i class="fa-solid fa-timeline"></i> LINIMASA SINTAKS PEMBELAJARAN (TIMESTAMPS):
+              </div>
+              <div class="timeline-chips-grid">
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">00:00 - 04:15</span>
+                  <span>Apersepsi & Apersepsi TPACK</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">04:16 - 09:30</span>
+                  <span>Pemanasan Game Berpasangan</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">09:31 - 22:50</span>
+                  <span>Kegiatan Inti 3v3 Berdiferensiasi</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">22:51 - 28:00</span>
+                  <span>Pendinginan, Refleksi & Evaluasi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-frame-note">
+              <span><i class="fa-solid fa-circle-check text-volt"></i> Rekaman video telah diobservasi oleh Guru Pamong dan memenuhi standar rubrik Lampiran 8 PPG Prajabatan UNY.</span>
+              <span>Resolusi: 1080p FHD • 60 FPS</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS VIDEO PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS VIDEO SIKLUS 1</span>
+            <h2>ANALISIS <span class="text-volt">PELAKSANAAN PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap keterampilan mengajar, interaksi lapangan, dan kendala audio-visual Siklus 1</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Keterlaksanaan Skenario Nyata</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Setting Lapangan:</strong> Dilaksanakan di lapangan basket luar ruangan SMKN 3 Kasihan dengan melibatkan 32 peserta didik kelas X Desain Komunikasi Visual (DKV).
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Kesesuaian Sintaks:</strong> Video merekam runtutan model *Teaching Games for Understanding (TGfU)* mulai dari *Game Form*, *Tactical Awareness*, hingga *Skill Execution*.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Pencapaian Tujuan:</strong> Terlihat 85% siswa berhasil melakukan kombinasi passing dada dan cut-in tanpa bola dalam format game 3 on 3.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Manifestasi Karakter:</strong> Rekaman memperlihatkan interaksi sportif antartim, saling tos tangan, dan sikap lapang dada saat terjadi kontak fisik wajar.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Kinerja Guru & Kendala Perekaman</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN PELAKSANAAN</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Posisi Berdiri Guru (*Teacher Positioning*):</strong> Guru bergerak dinamis mengitari lapangan sehingga seluruh kelompok 3v3 terpantau aktif.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Penguatan Positif (*Praise & Feedback*):</strong> Terdengar jelas ucapan apresiasi guru ("Bagus operannya!", "Cari ruang kosong!") yang memompa semangat siswa.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN & KENDALA</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Desau Angin Lapangan (*Wind Noise*):</strong> Mikrofon clip-on sempat menangkap hembusan angin kencang di menit 14-18 sehingga suara instruksi agak terdistorsi.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Titik Buta Sudut Kamera:</strong> Kamera statis pada tripod sempat terhalang punggung siswa saat terjadi pergerakan rotasi cepat ke sisi kiri.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Refleksi Keterampilan Mengajar</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Video-Reflective Practice (van Es & Sherin, 2008)</div>
+                <div class="theory-desc">Menonton rekaman mengajar menajamkan keterampilan 'Professional Noticing' guru dalam mengenali momen kritis keterlibatan siswa yang luput di lapangan.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Microteaching Skills (Allen & Ryan)</div>
+                <div class="theory-desc">Analisis 8 keterampilan dasar mengajar: keterampilan bertanya, variasi stimulus, pembukaan yang menarik, hingga penutupan terstruktur.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Verbal Feedback Latency (Schmidt & Wulf)</div>
+                <div class="theory-desc">Pemberian umpan balik verbal langsung (*immediate augmented feedback*) saat siswa melakukan aksi gerak terbukti menguatkan skema memori motorik.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 2 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-2" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-volleyball"></i> Praktik Mengajar Bola Voli</span>
+            <span class="chip"><i class="fa-solid fa-clock"></i> Durasi: 30 Menit (Full Edit)</span>
+          </div>
+          <h2>SIKLUS 2: VIDEO PRAKTIK PEMBELAJARAN BOLA VOLI</h2>
+          <p>
+            Dokumentasi video pembelajaran Siklus 2 menampilkan implementasi media bola busa adaptif, demonstrasi perkenaan passing bawah berpasangan, rotasi regu dalam permainan net portabel, serta sesi refleksi antar teman (*peer-assessment*).
+          </p>
+        </div>
+
+        <!-- Video Player Section -->
+        <section class="video-viewer-section reveal">
+          <div class="video-viewer-card">
+            <div class="video-card-header">
+              <div class="video-title-info">
+                <div class="video-icon-square"><i class="fa-brands fa-youtube"></i></div>
+                <div>
+                  <h3>REKAMAN VIDEO SIKLUS 2 (BOLA VOLI)</h3>
+                  <span>Dokumentasi Pelaksanaan Praktik Mengajar PJOK • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="video-action-buttons">
+                <a href="https://www.youtube.com" target="_blank" class="btn-volt">
+                  <i class="fa-brands fa-youtube"></i> TONTON DI YOUTUBE
+                </a>
+                <a href="../Dokumen/Modul Permainan Bola Voli.pdf" target="_blank" class="btn-outline">
+                  <i class="fa-solid fa-file-pdf"></i> DOKUMEN MODUL
+                </a>
+              </div>
+            </div>
+
+            <!-- Video Responsive Frame -->
+            <div class="video-frame-wrapper">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                title="Video Praktik Siklus 2 Bola Voli"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <!-- Video Timeline Box -->
+            <div class="video-timeline-box">
+              <div class="video-timeline-title">
+                <i class="fa-solid fa-timeline"></i> LINIMASA SINTAKS PEMBELAJARAN (TIMESTAMPS):
+              </div>
+              <div class="timeline-chips-grid">
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">00:00 - 05:00</span>
+                  <span>Apersepsi & Motivasi Bebas Rasa Sakit</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">05:01 - 10:20</span>
+                  <span>Drill Passing Bola Busa Berpasangan</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">10:21 - 24:30</span>
+                  <span>Rally Permainan Net Mini 4 on 4</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">24:31 - 30:00</span>
+                  <span>Peer-Assessment & Umpan Balik Guru</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-frame-note">
+              <span><i class="fa-solid fa-circle-check text-volt"></i> Rekaman video memperlihatkan diferensiasi proses dan peningkatan drastis keaktifan siswa perempuan di lapangan.</span>
+              <span>Resolusi: 1080p FHD • 60 FPS</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS VIDEO PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS VIDEO SIKLUS 2</span>
+            <h2>ANALISIS <span class="text-volt">PELAKSANAAN PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap efektivitas modifikasi alat, interaksi kelas, dan keterampilan pedagogik Siklus 2</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Keterlaksanaan Skenario Nyata</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Dinamika Nyata Kelas:</strong> Terlihat jelas transisi emosional siswa yang awalnya takut bola keras menjadi sangat percaya diri saat menggunakan bola busa modifikasi.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Keterlaksanaan Skenario:</strong> Guru berhasil menerapkan scaffolding bertahap dari lempar-tangkap, passing pantul, hingga permainan beregu dengan net modifikasi.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Pencapaian Kompetensi:</strong> Terekam rally panjang antartim mencapai rata-rata 6-8 kali pantulan bola tanpa jatuh, membuktikan keberhasilan penguasaan teknik.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Profil Karakter:</strong> Siswa saling memanggil nama sebelum menyambut bola ("Saya!", "Bantu!"), mencerminkan komunikasi kolaboratif yang solid.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Kinerja Guru & Kendala Perekaman</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN PELAKSANAAN</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Demonstrasi Gerak Sempurna (*Modeling*):</strong> Guru mencontohkan sudut lengan dan dorongan kaki dengan gerakan lambat yang sangat mudah ditiru murid.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Pemanfaatan Suara Guru:</strong> Intonasi vokal guru jelas dan tegas, terdengar dominan menembus riuh antusiasme siswa di lapangan.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN & KENDALA</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Fokus Kamera Ganda:</strong> Aktivitas di dua lapangan mini terpisah membuat kamera sesekali kehilangan momen rally di lapangan kedua.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Pengaturan Jeda Rehidrasi:</strong> Guru sempat lupa memberikan jeda minum 2 menit di tengah cuaca panas sebelum diingatkan Guru Pamong.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Refleksi Keterampilan Mengajar</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Observational Learning Theory (Albert Bandura)</div>
+                <div class="theory-desc">Proses atensi, retensi, reproduksi motorik, dan motivasi berlangsung optimal berkat peragaan gerak langsung guru dan siswa model sebaya.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Differentiated Instruction in Action (Tomlinson)</div>
+                <div class="theory-desc">Video merekam implementasi diferensiasi produk di mana kelompok mahir bermain dengan bola standar sementara kelompok berkembang memakai bola busa.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Classroom Management in PE (Paul Darst)</div>
+                <div class="theory-desc">Prosedur pergantian peran observer dan pemain berjalan tertib membuktikan efektivitas pembentukan kesepakatan kelas (*routines & protocols*).</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 3 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-3" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-futbol"></i> Praktik Mengajar Sepak Bola</span>
+            <span class="chip"><i class="fa-solid fa-clock"></i> Durasi: 32 Menit (Full Edit)</span>
+          </div>
+          <h2>SIKLUS 3: VIDEO PRAKTIK PEMBELAJARAN SEPAK BOLA</h2>
+          <p>
+            Rekaman pelaksanaan pembelajaran Siklus 3 memperlihatkan manajemen multilapangan mini pada turnamen <em>Small-Sided Games (4v4)</em>, penerapan timer audio digital otomatis, serta keterlibatan aktif dan setara seluruh siswa putra maupun putri.
+          </p>
+        </div>
+
+        <!-- Video Player Section -->
+        <section class="video-viewer-section reveal">
+          <div class="video-viewer-card">
+            <div class="video-card-header">
+              <div class="video-title-info">
+                <div class="video-icon-square"><i class="fa-brands fa-youtube"></i></div>
+                <div>
+                  <h3>REKAMAN VIDEO SIKLUS 3 (SEPAK BOLA)</h3>
+                  <span>Dokumentasi Pelaksanaan Praktik Mengajar PJOK • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="video-action-buttons">
+                <a href="https://www.youtube.com" target="_blank" class="btn-volt">
+                  <i class="fa-brands fa-youtube"></i> TONTON DI YOUTUBE
+                </a>
+                <a href="../Dokumen/Modul Permainan Sepak Bola.pdf" target="_blank" class="btn-outline">
+                  <i class="fa-solid fa-file-pdf"></i> DOKUMEN MODUL
+                </a>
+              </div>
+            </div>
+
+            <!-- Video Responsive Frame -->
+            <div class="video-frame-wrapper">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                title="Video Praktik Siklus 3 Sepak Bola"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <!-- Video Timeline Box -->
+            <div class="video-timeline-box">
+              <div class="video-timeline-title">
+                <i class="fa-solid fa-timeline"></i> LINIMASA SINTAKS PEMBELAJARAN (TIMESTAMPS):
+              </div>
+              <div class="timeline-chips-grid">
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">00:00 - 04:45</span>
+                  <span>Apersepsi Konsep Spasial Segitiga Passing</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">04:46 - 11:00</span>
+                  <span>Pemanasan Rondo (Kucing-Kucingan 3v1)</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">11:01 - 26:15</span>
+                  <span>Small-Sided Games 4v4 3 Mini Pitch</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">26:16 - 32:00</span>
+                  <span>Analisis Taktik, Refleksi & Penutup</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-frame-note">
+              <span><i class="fa-solid fa-circle-check text-volt"></i> Terlihat pengorganisasian kelas yang sangat dinamis dengan rotasi tim otomatis menggunakan sinyal timer audio.</span>
+              <span>Resolusi: 1080p FHD • 60 FPS</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS VIDEO PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS VIDEO SIKLUS 3</span>
+            <h2>ANALISIS <span class="text-volt">PELAKSANAAN PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap manajemen multilapangan dan inklusivitas pembelajaran sepak bola Siklus 3</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Keterlaksanaan Skenario Nyata</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Pemandangan Lapangan:</strong> Pembagian lapangan besar menjadi 3 mini pitch (lapangan mini) berbatas kerucut warna kuning dan merah berjalan sangat tertib.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Inklusivitas Gender Terekam:</strong> Siswa putri terlihat aktif meminta bola dan melepaskan operan akurat tanpa diintimidasi pemain putra.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Tujuan Pembelajaran:</strong> Penguasaan konsep membuka ruang dan operan mendatar terbukti terekam dalam frekuensi passing rata-rata 12 kali per menit.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Profil Pancasila:</strong> Nilai <em>Gotong Royong</em> tercermin dalam selebrasi gol bersama yang mengapresiasi pengumpan terakhir.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Kinerja Guru & Kendala Perekaman</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN PELAKSANAAN</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Active Learning Time Maksimal:</strong> Tidak ada satupun siswa yang duduk melamun di pinggir lapangan; seluruh murid aktif bermain dan menilai.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Penggunaan Pertanyaan Kritis (*Questioning*):</strong> Saat jeda babak, guru memicu diskusi: "Mengapa tim B sulit menembus pertahanan tim A?".</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN & KENDALA</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Perubahan Pencahayaan Alami:</strong> Cuaca mendung berganti terik matahari menyebabkan kontras video sempat berubah di pertengahan rekaman.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Intensitas Fisik Tinggi:</strong> Dua siswa tampak kelelahan berat di menit ke-20, guru langsung sigap melakukan pergantian pemain cadangan.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Refleksi Keterampilan Mengajar</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Game Sense Questioning (Light & Fawns)</div>
+                <div class="theory-desc">Keterampilan guru mengajukan pertanyaan terbuka (*open-ended questions*) mendorong proses pemecahan masalah taktis dan metakognisi siswa.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Non-Linear Pedagogy (Chow et al., 2016)</div>
+                <div class="theory-desc">Video merekam eksplorasi solusi gerak mandiri tanpa instruksi kaku satu arah, menghasilkan variasi passing yang kreatif dan adaptif.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Inclusive Pedagogy in Physical Education (Vickerman)</div>
+                <div class="theory-desc">Penyesuaian aturan bermain (misal: sentuhan maksimal 3 kali) menjamin kesetaraan peran bermain antara siswa pemula dan siswa terlatih.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 4 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-4" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-heart-pulse"></i> Praktik Mengajar Kebugaran Jasmani</span>
+            <span class="chip"><i class="fa-solid fa-clock"></i> Durasi: 35 Menit (Full Edit)</span>
+          </div>
+          <h2>SIKLUS 4: VIDEO PRAKTIK PEMBELAJARAN KEBUGARAN JASMANI</h2>
+          <p>
+            Video puncak evaluasi sumatif UAS merekam pelaksanaan <em>Circuit Training 6 Pos</em> dengan iringan musik ritmis energik, demonstrasi pemeriksaan denyut nadi mandiri, pengisian formulir evaluasi digital, serta penutupan reflektif komprehensif.
+          </p>
+        </div>
+
+        <!-- Video Player Section -->
+        <section class="video-viewer-section reveal">
+          <div class="video-viewer-card">
+            <div class="video-card-header">
+              <div class="video-title-info">
+                <div class="video-icon-square"><i class="fa-brands fa-youtube"></i></div>
+                <div>
+                  <h3>REKAMAN VIDEO SIKLUS 4 (KEBUGARAN JASMANI)</h3>
+                  <span>Dokumentasi Pelaksanaan Praktik Mengajar PJOK • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="video-action-buttons">
+                <a href="https://www.youtube.com" target="_blank" class="btn-volt">
+                  <i class="fa-brands fa-youtube"></i> TONTON DI YOUTUBE
+                </a>
+                <a href="../Dokumen/Lampiran 7 All.pdf" target="_blank" class="btn-outline">
+                  <i class="fa-solid fa-file-pdf"></i> DOKUMEN MODUL
+                </a>
+              </div>
+            </div>
+
+            <!-- Video Responsive Frame -->
+            <div class="video-frame-wrapper">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                title="Video Praktik Siklus 4 Kebugaran Jasmani"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <!-- Video Timeline Box -->
+            <div class="video-timeline-box">
+              <div class="video-timeline-title">
+                <i class="fa-solid fa-timeline"></i> LINIMASA SINTAKS PEMBELAJARAN (TIMESTAMPS):
+              </div>
+              <div class="timeline-chips-grid">
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">00:00 - 05:30</span>
+                  <span>Pengukuran Resting Heart Rate & Apersepsi</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">05:31 - 12:00</span>
+                  <span>Pemanasan Tabata & Orientasi 6 Pos Sirkuit</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">12:01 - 27:45</span>
+                  <span>Pelaksanaan Circuit Training Musik 128 BPM</span>
+                </div>
+                <div class="timeline-chip">
+                  <span class="timeline-time-badge">27:46 - 35:00</span>
+                  <span>Pengecekan Target Heart Rate & Refleksi RPE</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-frame-note">
+              <span><i class="fa-solid fa-circle-check text-volt"></i> Menampilkan kepemimpinan instruksional guru yang energik, manajemen risiko keselamatan prima, dan penilaian holistik.</span>
+              <span>Resolusi: 1080p FHD • 60 FPS</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS VIDEO PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS VIDEO SIKLUS 4</span>
+            <h2>ANALISIS <span class="text-volt">PELAKSANAAN PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap atmosfer pembelajaran sirkuit, manajemen keselamatan, dan performa pedagogik Siklus 4</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Keterlaksanaan Skenario Nyata</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Atmosfer Kelas:</strong> Rekaman memperlihatkan transisi pos latihan sirkuit yang rapi dengan dentuman musik ritmis tanpa terjadi kemacetan (*traffic bottleneck*).
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Penerapan Aspek K3:</strong> Guru mengawasi teknik pendaratan lutut lentur (*landing mechanics*) saat pos squat jump untuk mencegah cedera sendi.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Ketercapaian TP:</strong> 100% siswa terekam mampu meraba arteri radialis mereka dan mencatat denyut nadi latihan pada lembar data kendali.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Dimensi Profil Pelajar:</strong> Terlihat kemandirian tinggi saat siswa saling mengingatkan waktu transisi pos 15 detik secara disiplin.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Kinerja Guru & Kendala Perekaman</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN PELAKSANAAN</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Ketepatan Alokasi Waktu (*Time Pacing*):</strong> Waktu aktivitas gerak fisik murni mencapai 72% dari total alokasi jam pelajaran.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Kehadiran Guru yang Karismatik:</strong> Guru turut melakukan gerakan pemanasan dan berkeliling memberikan koreksi postur tubuh yang humanis.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN & KENDALA</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Gema Audio di Pinggir Gedung:</strong> Pantulan suara musik speaker ke dinding aula sekolah samping lapangan sempat menimbulkan sedikit gema di rekaman.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Pencatatan RPE di Akhir Sesi:</strong> Dua menit terakhir sempat tergesa-gesa saat pengumpulan data sebelum jam pelajaran berikutnya berganti.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Refleksi Keterampilan Mengajar</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Active Learning Time in PE / ALT-PE (Metzler, 2011)</div>
+                <div class="theory-desc">Tingginya keterlibatan siswa pada tingkat kesulitan motorik yang tepat berkorelasi langsung dengan peningkatan kebugaran dan hasil belajar kognitif.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Teacher Enthusiasm & Contagion Effect (Brophy)</div>
+                <div class="theory-desc">Antusiasme visual, senyum, dan energi fisik guru menular secara emosional kepada siswa, mereduksi keengganan berolahraga berat.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Safety & Risk Management in Sport Pedagogy</div>
+                <div class="theory-desc">Kewaspadaan situasional guru dalam mengatur jarak aman antar pos latihan sirkuit memenuhi prinsip legal liability dan duty of care pendidik.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+    <!-- ROADMAP / EVOLUTION SUMMARY -->
+    <section class="roadmap-section">
+      <div class="container">
+        <div class="section-headline reveal">
+          <span class="badge-sport">PETA EVOLUSI KETERAMPILAN MENGAJAR</span>
+          <h2>TRANSFORMASI MENGAJAR <span class="text-volt">4 SIKLUS PPL MANDIRI</span></h2>
+          <p>Bagaimana rekaman video menjadi cermin reflektif perkembangan profesional guru dari evaluasi UTS menuju UAS</p>
+          <div class="header-line-center"></div>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- SIKLUS 1 -->
+          <div class="roadmap-step highlight-uts reveal">
+            <span class="roadmap-badge badge-uts">UTS • SIKLUS 1</span>
+            <h4>ADAPTASI SUARA & POSISI</h4>
+            <p><strong>Fokus:</strong> Pola penyerangan bola basket 3v3.</p>
+            <p><strong>Refleksi Rekaman:</strong> Guru masih sering berdiri di satu sudut; artikulasi suara perlu dipertegas untuk menembus kebisingan lapangan.</p>
+          </div>
+
+          <!-- SIKLUS 2 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 2</span>
+            <h4>MODELING PERAGAAN</h4>
+            <p><strong>Fokus:</strong> Passing bawah bola voli beregu.</p>
+            <p><strong>Refleksi Rekaman:</strong> Peragaan gerak lambat guru sangat efektif; terlihat peningkatan interaksi komunikatif dan empati pada murid pemula.</p>
+          </div>
+
+          <!-- SIKLUS 3 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 3</span>
+            <h4>QUESTIONING & MULTILAPANGAN</h4>
+            <p><strong>Fokus:</strong> Small-Sided Games sepak bola 4v4.</p>
+            <p><strong>Refleksi Rekaman:</strong> Guru mahir melempar pertanyaan pemantik taktis; pengorganisasian 3 lapangan mini berjalan sangat dinamis.</p>
+          </div>
+
+          <!-- SIKLUS 4 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 4</span>
+            <h4>ORCHESTRATION & PRESENSI PRIMA</h4>
+            <p><strong>Fokus:</strong> Circuit training kebugaran jasmani.</p>
+            <p><strong>Refleksi Rekaman:</strong> Puncak kematangan mengajar; paduan ritme musik, disiplin waktu, dan manajemen risiko keselamatan terekam sempurna.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SPORTY -->
+    <footer class="footer-sport">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2 class="footer-logo">PPG <span class="text-volt">UNY.</span></h2>
+            <p>Mendidik dengan hati, bergerak dengan inovasi. Rekam jejak akademik guru PJOK masa depan.</p>
+            <div class="social-sport">
+              <a href="https://www.instagram.com/padlanholik/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:padlanholik2001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>JEJAK PPL 1</h3>
+            <a href="../PPL_1/profil.html">Profil Mahasiswa</a>
+            <a href="../PPL_1/artefak.html">Artefak Produk</a>
+            <a href="../PPL_1/penilaian.html">Penilaian GP</a>
+            <a href="../PPL_1/modelguru.html">Model Guru</a>
+          </div>
+
+          <div class="footer-links">
+            <h3>JEJAK PPL 2</h3>
+            <a href="rancangan.html">Rancangan Pembelajaran</a>
+            <a href="materi.html">Materi Pembelajaran</a>
+            <a href="media.html">Media Pembelajaran</a>
+            <a href="video.html">Video Pembelajaran</a>
+            <a href="instrumen.html">Instrumen Pembelajaran</a>
+            <a href="non-mengajar.html">Kegiatan Non-Mengajar</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>INFO & KONTAK</h3>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot text-volt"></i>
+              <div>
+                <span class="contact-label">LOKASI LPTK</span>
+                <p>FIK Universitas Negeri Yogyakarta</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope text-volt"></i>
+              <div>
+                <span class="contact-label">EMAIL AKADEMIK</span>
+                <p>padlanholik2001@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="../index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">BERANDA</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../filosofi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">FILOSOFI</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../refleksi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">REFLEKSI</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../dokumentasi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">DOKUMENTASI</a>
+          </div>
+          <p>© 2026 E-Portofolio PPG UNY | Dirancang oleh Padlan Holik</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT LOGIKA -->
+    <script>
+      function switchSiklus(evt, panelId) {
+        const panels = document.querySelectorAll(".cycle-panel");
+        panels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
+
+        const buttons = document.querySelectorAll(".cycle-tab-btn");
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        const selectedPanel = document.getElementById(panelId);
+        if (selectedPanel) {
+          selectedPanel.classList.add("active");
+        }
+
+        evt.currentTarget.classList.add("active");
+        triggerReveal();
+      }
+
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+      mobileMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        const icon = mobileMenu.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.className = "fa-solid fa-xmark";
+        } else {
+          icon.className = "fa-solid fa-bars-staggered";
+        }
+      });
+
+      function triggerReveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 60) {
+            element.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", triggerReveal);
+      window.addEventListener("load", triggerReveal);
+    </script>
+  </body>
+</html>

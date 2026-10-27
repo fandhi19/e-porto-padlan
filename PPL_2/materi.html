@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materi Pembelajaran 4 Siklus | E-Portofolio PPG UNY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../CSS/rancangan.css" />
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="tactical-grid"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-brand">
+          <img src="../logo.png" alt="Logo Universitas" class="univ-logo" />
+          <span>E-PORTOFOLIO <span class="text-volt">PPG.</span></span>
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html" class="nav-link">BERANDA</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">JEJAK PPL 1 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../PPL_1/profil.html">Profil Mahasiswa</a></li>
+              <li><a href="../PPL_1/artefak.html">Artefak Produk</a></li>
+              <li><a href="../PPL_1/penilaian.html">Penilaian GP</a></li>
+              <li><a href="../PPL_1/modelguru.html">Model Guru</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link active">JEJAK PPL 2 <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="rancangan.html">Rancangan Pembelajaran</a></li>
+              <li><a href="materi.html" style="background: var(--volt); color: var(--bg-dark)">Materi Pembelajaran</a></li>
+              <li><a href="media.html">Media Pembelajaran</a></li>
+              <li><a href="video.html">Video Pembelajaran</a></li>
+              <li><a href="instrumen.html">Instrumen Pembelajaran</a></li>
+              <li><a href="non-mengajar.html">Kegiatan Non-Mengajar</a></li>
+            </ul>
+          </li>
+          <li><a href="../filosofi.html" class="nav-link">FILOSOFI</a></li>
+          <li><a href="../refleksi.html" class="nav-link">REFLEKSI</a></li>
+          <li><a href="../dokumentasi.html" class="nav-link">DOKUMENTASI</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="hero-bg-text">BAHAN AJAR</div>
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="badge-sport"><i class="fa-solid fa-book-open"></i> PPL MANDIRI • SMKN 3 KASIHAN • PJOK</div>
+          <h1 class="hero-title">
+            MATERI <br />
+            <span class="text-volt line-through">PEMBELAJARAN</span>
+          </h1>
+          <p class="hero-desc">
+            Dokumentasi bahan ajar dan materi instruksional 4 Siklus selama <strong>PPL Mandiri (PPL 2)</strong> di SMKN 3 Kasihan. Disusun terstruktur ke dalam evaluasi <strong>UTS (Siklus 1)</strong> dan <strong>UAS (Siklus 2, 3, dan 4)</strong>, memuat penampil berkas PDF materi serta telaah analisis kritis pedagogik.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIKLUS SELECTOR & GROUPING (UTS / UAS) -->
+    <section class="siklus-nav-section">
+      <div class="container">
+        <div class="siklus-group-container reveal">
+          <div class="group-header">
+            <div class="group-title-tag">
+              <i class="fa-solid fa-book-journal-whills text-volt" style="font-size: 1.5rem"></i>
+              <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 2px">NAVIGASI BAHAN AJAR 4 SIKLUS</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim)">Pilih siklus materi untuk menelaah dokumen ajar dan analisis konseptualnya</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <span class="badge-eval badge-uts"><i class="fa-solid fa-bookmark"></i> UTS: SIKLUS 1</span>
+              <span class="badge-eval badge-uas"><i class="fa-solid fa-flag-checkered"></i> UAS: SIKLUS 2, 3, 4</span>
+            </div>
+          </div>
+
+          <div class="cycle-tabs-container">
+            <!-- TAB SIKLUS 1 (UTS) -->
+            <button class="cycle-tab-btn active" onclick="switchSiklus(event, 'panel-siklus-1')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uts">UTS</span>
+                <i class="fa-solid fa-basketball text-volt"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 1</span>
+              <span class="tab-cycle-topic">Materi Bola Basket • Taktik & Pola Gerak</span>
+            </button>
+
+            <!-- TAB SIKLUS 2 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-2')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-volleyball text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 2</span>
+              <span class="tab-cycle-topic">Materi Bola Voli • Variasi Passing</span>
+            </button>
+
+            <!-- TAB SIKLUS 3 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-3')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-futbol text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 3</span>
+              <span class="tab-cycle-topic">Materi Sepak Bola • Taktik Small-Sided</span>
+            </button>
+
+            <!-- TAB SIKLUS 4 (UAS) -->
+            <button class="cycle-tab-btn" onclick="switchSiklus(event, 'panel-siklus-4')">
+              <div class="tab-top-meta">
+                <span class="badge-eval badge-uas">UAS</span>
+                <i class="fa-solid fa-heart-pulse text-cyan"></i>
+              </div>
+              <span class="tab-cycle-label">SIKLUS 4</span>
+              <span class="tab-cycle-topic">Materi Kebugaran • Circuit Training</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN INTERACTIVE CYCLE PANELS -->
+    <main class="container">
+
+      <!-- ==============================================
+           PANEL SIKLUS 1 (UTS)
+           ============================================== -->
+      <div id="panel-siklus-1" class="cycle-panel active">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uts"><i class="fa-solid fa-star"></i> EVALUASI UTS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-basketball"></i> Bahan Ajar Bola Basket</span>
+            <span class="chip"><i class="fa-solid fa-file-lines"></i> Teori & Panduan Praktik</span>
+          </div>
+          <h2>SIKLUS 1: MATERI PEMBELAJARAN BOLA BASKET</h2>
+          <p>
+            Materi bahan ajar Siklus 1 memuat penjabaran konsep keterampilan gerak fundamental permainan bola basket (passing dada, pantul, atas kepala, pivot, dan pola penyerangan 3v3) yang disusun ringkas dengan bantuan diagram posisi lapangan.
+          </p>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <section class="pdf-viewer-section reveal">
+          <div class="pdf-viewer-card">
+            <div class="pdf-card-header">
+              <div class="pdf-title-info">
+                <div class="pdf-icon-square"><i class="fa-solid fa-file-pdf"></i></div>
+                <div>
+                  <h3>DOKUMEN BAHAN AJAR SIKLUS 1 (BOLA BASKET)</h3>
+                  <span>Materi Instruksional PJOK Fase E • Evaluasi UTS</span>
+                </div>
+              </div>
+              <div class="pdf-action-buttons">
+                <a href="../Dokumen/Modul Permainan Bola Basket.pdf" target="_blank" class="btn-volt">
+                  <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN
+                </a>
+                <a href="../Dokumen/Modul Permainan Bola Basket.pdf" download="Materi_Siklus1_Bola_Basket.pdf" class="btn-outline">
+                  <i class="fa-solid fa-download"></i> UNDUH BERKAS
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-frame-wrapper">
+              <iframe src="../Dokumen/Modul Permainan Bola Basket.pdf" title="Materi Pembelajaran Siklus 1 Bola Basket" loading="lazy"></iframe>
+            </div>
+
+            <div class="pdf-frame-note">
+              <span><i class="fa-solid fa-circle-info text-volt"></i> Bahan ajar dilengkapi uraian biomekanika perkenaan bola, analisis kesalahan umum, dan petunjuk keselamatan bermain.</span>
+              <span>Format: PDF Bahan Ajar • Kurikulum Merdeka</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS MATERI PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS MATERI SIKLUS 1</span>
+            <h2>ANALISIS <span class="text-volt">MATERI PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap keterbacaan, relevansi kontekstual, dan landasan teoretis materi Siklus 1</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Literasi Gerak & Pemahaman Kognitif</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Konteks Literasi Siswa:</strong> Siswa SMK cenderung menyukai panduan materi visual berbasis infografis langkah gerak dibandingkan uraian teks teoretis yang panjang.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Kesesuaian Muatan:</strong> Materi memuat analisis fase persiapan, fase pelaksanaan (impact), dan fase lanjutan (follow-through) pada keterampilan melempar dan menangkap bola.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Tujuan Pembelajaran Kognitif:</strong> Peserta didik mampu menganalisis situasi bertahan lawan untuk memilih jenis operan (chest pass vs bounce pass) yang paling efektif.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Integrasi Karakter:</strong> Materi menyisipkan nilai kejujuran, respek terhadap keputusan wasit, dan komunikasi positif antarrekan satu tim.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Evaluasi Isi & Aksesibilitas</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Ilustrasi Langkah Taktis Jelas:</strong> Disertai bagan rotasi pergerakan pemain tanpa bola yang mudah dipahami pemula.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Rubrik Pemecahan Masalah (Troubleshooting):</strong> Menyajikan tabel "Kesalahan Gerak & Solusi Perbaikan" yang memfasilitasi koreksi mandiri.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Keterbatasan Gambar Statis:</strong> Gerakan ritmis dinamis seperti lay-up shoot sulit digambarkan secara utuh hanya melalui gambar 2 dimensi.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Variasi Taktik Lanjutan:</strong> Belum mencakup pola transisi bertahan ke menyerang cepat (fastbreak) secara mendalam.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Prinsip Desain Pesan Instruksional</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Cognitive Load Theory (John Sweller)</div>
+                <div class="theory-desc">Pemisahan materi ke dalam segmen-segmen kecil (chunking) mencegah beban kognitif berlebih (extraneous cognitive load) pada memori kerja siswa.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Dual Coding Theory (Allan Paivio)</div>
+                <div class="theory-desc">Penggabungan teks ringkas dengan diagram gerak visual mengaktifkan saluran kognitif verbal dan non-verbal secara simultan sehingga retensi memori gerak lebih tahan lama.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Pedagogical Content Knowledge (Lee Shulman)</div>
+                <div class="theory-desc">Menata konsep olahraga kompetitif formal menjadi materi pembelajaran PJOK yang adaptif, ramah pemula, dan berorientasi pada proses pendidikan.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 2 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-2" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-volleyball"></i> Bahan Ajar Bola Voli</span>
+            <span class="chip"><i class="fa-solid fa-file-lines"></i> Mekanika Passing & Rally</span>
+          </div>
+          <h2>SIKLUS 2: MATERI PEMBELAJARAN BOLA VOLI</h2>
+          <p>
+            Bahan ajar Siklus 2 berfokus pada penguasaan teknik dasar passing bawah dan passing atas, konsep posisi siap (ready position), sudut pantul lengan, serta komunikasi taktis dalam formasi pertahanan bola voli beregu.
+          </p>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <section class="pdf-viewer-section reveal">
+          <div class="pdf-viewer-card">
+            <div class="pdf-card-header">
+              <div class="pdf-title-info">
+                <div class="pdf-icon-square"><i class="fa-solid fa-file-pdf"></i></div>
+                <div>
+                  <h3>DOKUMEN BAHAN AJAR SIKLUS 2 (BOLA VOLI)</h3>
+                  <span>Materi Instruksional PJOK Fase E • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="pdf-action-buttons">
+                <a href="../Dokumen/Modul Permainan Bola Voli.pdf" target="_blank" class="btn-volt">
+                  <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN
+                </a>
+                <a href="../Dokumen/Modul Permainan Bola Voli.pdf" download="Materi_Siklus2_Bola_Voli.pdf" class="btn-outline">
+                  <i class="fa-solid fa-download"></i> UNDUH BERKAS
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-frame-wrapper">
+              <iframe src="../Dokumen/Modul Permainan Bola Voli.pdf" title="Materi Pembelajaran Siklus 2 Bola Voli" loading="lazy"></iframe>
+            </div>
+
+            <div class="pdf-frame-note">
+              <span><i class="fa-solid fa-circle-info text-volt"></i> Dokumen memuat materi penyesuaian postur tubuh saat menerima bola servis dan tips koordinasi lengan-lutut.</span>
+              <span>Format: PDF Bahan Ajar • Kurikulum Merdeka</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS MATERI PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS MATERI SIKLUS 2</span>
+            <h2>ANALISIS <span class="text-volt">MATERI PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap substansi materi passing dan formasi permainan bola voli Siklus 2</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Literasi Gerak & Pemahaman Kognitif</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Konteks Hambatan Psikologis:</strong> Materi dirancang khusus untuk mematahkan mitos bahwa bermain voli selalu menyakitkan pergelangan tangan, dengan menyajikan penjelasan anatomis area perkenaan yang benar.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Kedalaman Materi:</strong> Rincian konsep sudut pantul hukum pemantulan sudut datang = sudut pantul (*angle of incidence = angle of reflection*) pada bidang datar lengan.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Tujuan Kognitif (TP):</strong> Peserta didik mampu menjelaskan fungsi meluruskan kedua siku serta mendorong kaki saat menyambut bola lambung rendah.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Dimensi Profil Pelajar:</strong> Menumbuhkan <em>Bernalar Kritis</em> (mengantisipasi arah bola lawan) dan <em>Kolaborasi Tim</em>.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Evaluasi Isi & Aksesibilitas</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Penjelasan Biomekanika Sederhana:</strong> Memandu sudut pergelangan tangan terkunci rapat dengan bahasa yang komunikatif dan ilustratif.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Progresi Materi Bertahap:</strong> Disusun dari teknik passing individu, berpasangan, formasi segitiga, hingga skema permainan mini.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Materi Servis Terbatas:</strong> Belum memuat perbandingan mendalam antara servis bawah dan servis atas (floating serve).</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Analisis Situasi Transisi:</strong> Masih minim penjelasan taktis terkait antisipasi bola liar (*free ball*).</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Prinsip Desain Pesan Instruksional</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Kinesiology & Biomechanics in PE (Hay & Reid)</div>
+                <div class="theory-desc">Pemahaman titik tumpu, tuas gerak lengan bawah, dan transfer momentum dari tungkai ke lengan untuk menghasilkan lambungan bola yang stabil.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Information Processing Theory (Schmidt & Lee)</div>
+                <div class="theory-desc">Penyajian materi gerak membantu siswa mempercepat tahapan identifikasi stimulus arah bola dan seleksi respon motorik yang presisi.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Diferensiasi Konten (Carol Ann Tomlinson)</div>
+                <div class="theory-desc">Materi menyediakan variasi petunjuk gerak untuk siswa bertubuh tinggi maupun siswa yang mengandalkan kelincahan reaksi bawah.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 3 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-3" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-futbol"></i> Bahan Ajar Sepak Bola</span>
+            <span class="chip"><i class="fa-solid fa-file-lines"></i> Taktik Small-Sided Games</span>
+          </div>
+          <h2>SIKLUS 3: MATERI PEMBELAJARAN SEPAK BOLA</h2>
+          <p>
+            Materi bahan ajar Siklus 3 berfokus pada penguasaan keterampilan mengoper (passing) dan menghentikan bola (controlling) dalam konsep permainan dinamis <em>Small-Sided Games (SSG)</em> yang mengedepankan pemanfaatan ruang terbuka.
+          </p>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <section class="pdf-viewer-section reveal">
+          <div class="pdf-viewer-card">
+            <div class="pdf-card-header">
+              <div class="pdf-title-info">
+                <div class="pdf-icon-square"><i class="fa-solid fa-file-pdf"></i></div>
+                <div>
+                  <h3>DOKUMEN BAHAN AJAR SIKLUS 3 (SEPAK BOLA)</h3>
+                  <span>Materi Instruksional PJOK Fase E • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="pdf-action-buttons">
+                <a href="../Dokumen/Modul Permainan Sepak Bola.pdf" target="_blank" class="btn-volt">
+                  <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN
+                </a>
+                <a href="../Dokumen/Modul Permainan Sepak Bola.pdf" download="Materi_Siklus3_Sepak_Bola.pdf" class="btn-outline">
+                  <i class="fa-solid fa-download"></i> UNDUH BERKAS
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-frame-wrapper">
+              <iframe src="../Dokumen/Modul Permainan Sepak Bola.pdf" title="Materi Pembelajaran Siklus 3 Sepak Bola" loading="lazy"></iframe>
+            </div>
+
+            <div class="pdf-frame-note">
+              <span><i class="fa-solid fa-circle-info text-volt"></i> Bahan ajar memuat konsep passing kaki bagian dalam, posisi kaki tumpu, dan regulasi khusus permainan lapangan mini.</span>
+              <span>Format: PDF Bahan Ajar • Kurikulum Merdeka</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS MATERI PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS MATERI SIKLUS 3</span>
+            <h2>ANALISIS <span class="text-volt">MATERI PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap konsep permainan taktis dan penguasaan teknik dasar sepak bola Siklus 3</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Literasi Gerak & Pemahaman Kognitif</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Konteks Pemahaman Taktik:</strong> Menghapus stigma bahwa sepak bola hanya menendang bola sekeras-kerasnya; materi menekankan akurasi operan dan komunikasi antar pemain.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Fokus Materi:</strong> Anatomi posisi kaki tumpu di samping bola (10-15 cm) dan perkenaan bola tepat di titik tengah agar laju bola mendatar menyusur tanah.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Tujuan Pembelajaran (TP):</strong> Peserta didik mampu menganalisis timing pelepasan umpan saat rekan bergerak membuka ruang bebas.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Dimensi Profil Pelajar:</strong> Penguatan <em>Gotong Royong</em> (kolektivitas permainan) dan <em>Sportivitas</em>.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Evaluasi Isi & Aksesibilitas</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Penekanan Konsep Spasial:</strong> Mengajarkan konsep segitiga passing (passing triangle) yang sangat aplikatif untuk permainan sepak bola modern.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Rubrik Evaluasi Diri:</strong> Tersedia daftar periksa (checklist) sederhana untuk mengukur kemahiran kontrol bola pertama (first touch).</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Materi Menggiring (Dribbling):</strong> Belum mengulas secara komprehensif teknik dribbling menggunakan kura-kura kaki.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Transisi Bertahan:</strong> Kurang mendalam membahas prinsip delay dan pressing saat kehilangan penguasaan bola.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Prinsip Desain Pesan Instruksional</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">Ecological Dynamics in Sport (Davids & Button)</div>
+                <div class="theory-desc">Informasi dalam materi mengarahkan siswa untuk membaca keterkaitan lingkungan (posisi lawan, rekan, dan ruang kosong) sebagai pemicu aksi operan (*affordances*).</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Schema Theory of Discrete Motor Skills (Schmidt)</div>
+                <div class="theory-desc">Variasi jarak operan dalam materi melatih pembentukan *generalized motor program* (GMP) parameter gaya dan arah tendangan pada kaki siswa.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Game Sense Pedagogy (Richard Light)</div>
+                <div class="theory-desc">Materi memandu siswa berpikir taktis (*tactical thinking*) melalui pertanyaan pemantik: "Kapan saat terbaik melepaskan umpan?".</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- ==============================================
+           PANEL SIKLUS 4 (UAS)
+           ============================================== -->
+      <div id="panel-siklus-4" class="cycle-panel">
+        <div class="cycle-header-box reveal">
+          <div class="cycle-meta-chips">
+            <span class="badge-eval badge-uas"><i class="fa-solid fa-medal"></i> EVALUASI UAS</span>
+            <span class="chip"><i class="fa-solid fa-school"></i> Fase E (Kelas X) • SMKN 3 Kasihan</span>
+            <span class="chip chip-volt"><i class="fa-solid fa-heart-pulse"></i> Bahan Ajar Kebugaran Jasmani</span>
+            <span class="chip"><i class="fa-solid fa-file-lines"></i> Circuit Training & FITT</span>
+          </div>
+          <h2>SIKLUS 4: MATERI PEMBELAJARAN KEBUGARAN JASMANI</h2>
+          <p>
+            Materi bahan ajar Siklus 4 menyajikan panduan komprehensif mengenai konsep komponen kebugaran jasmani terkait kesehatan (*health-related fitness*), prinsip beban latihan FITT, metodologi *Circuit Training*, serta cara menghitung denyut nadi latihan mandiri.
+          </p>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <section class="pdf-viewer-section reveal">
+          <div class="pdf-viewer-card">
+            <div class="pdf-card-header">
+              <div class="pdf-title-info">
+                <div class="pdf-icon-square"><i class="fa-solid fa-file-pdf"></i></div>
+                <div>
+                  <h3>DOKUMEN BAHAN AJAR SIKLUS 4 (KEBUGARAN JASMANI)</h3>
+                  <span>Materi Instruksional PJOK Fase E • Evaluasi UAS</span>
+                </div>
+              </div>
+              <div class="pdf-action-buttons">
+                <a href="../Dokumen/Lampiran 7 All.pdf" target="_blank" class="btn-volt">
+                  <i class="fa-solid fa-up-right-from-square"></i> BUKA FULLSCREEN
+                </a>
+                <a href="../Dokumen/Lampiran 7 All.pdf" download="Materi_Siklus4_Kebugaran_Jasmani.pdf" class="btn-outline">
+                  <i class="fa-solid fa-download"></i> UNDUH BERKAS
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-frame-wrapper">
+              <iframe src="../Dokumen/Lampiran 7 All.pdf" title="Materi Pembelajaran Siklus 4 Kebugaran Jasmani" loading="lazy"></iframe>
+            </div>
+
+            <div class="pdf-frame-note">
+              <span><i class="fa-solid fa-circle-info text-volt"></i> Dokumen memuat tabel rumus target denyut nadi (MHR & THR), panduan 6 pos sirkuit latihan, dan tips nutrisi hidrasi sehat.</span>
+              <span>Format: PDF Bahan Ajar • Kurikulum Merdeka</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANALISIS MATERI PEMBELAJARAN (3 POIN) -->
+        <section class="analysis-section">
+          <div class="section-headline reveal">
+            <span class="badge-sport">EVALUASI KRITIS MATERI SIKLUS 4</span>
+            <h2>ANALISIS <span class="text-volt">MATERI PEMBELAJARAN</span></h2>
+            <p>Telaah reflektif terhadap muatan teori fisiologi latihan dan edukasi kebugaran seumur hidup Siklus 4</p>
+            <div class="header-line-center"></div>
+          </div>
+
+          <div class="analysis-grid">
+            <!-- 1. KONTEKS & TUJUAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">01</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Konteks & Tujuan</h3>
+              <div class="analysis-card-sub">Literasi Gerak & Pemahaman Kognitif</div>
+              <ul class="analysis-content-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Kebutuhan Nyata Siswa SMK:</strong> Siswa membutuhkan bekal pengetahuan kebugaran ergonomis agar mampu beraktivitas di industri kejuruan tanpa mengalami kelelahan kronis.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Konsep Esensial:</strong> Pengenalan 5 komponen kebugaran jasmani: daya tahan jantung-paru (kardiorespirasi), kekuatan otot, daya tahan otot, kelenturan, dan komposisi tubuh.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Tujuan Kognitif (TP):</strong> Siswa mampu menghitung Target Heart Rate (THR) pada rentang 60-80% dari Denyut Nadi Maksimal (220 - usia).
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <div>
+                    <strong>Dimensi Profil Pelajar:</strong> Menumbuhkan <em>Kemandirian</em> menjaga kesehatan diri dan <em>Bernalar Kritis</em> menganalisis respon fisiologis tubuh.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. KELEBIHAN & KEKURANGAN -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">02</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3>Kelebihan & Kekurangan</h3>
+              <div class="analysis-card-sub">Evaluasi Isi & Aksesibilitas</div>
+              
+              <div>
+                <span class="sub-title-badge badge-kelebihan"><i class="fa-solid fa-plus"></i> KELEBIHAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Aplikatif & Berkelanjutan:</strong> Menyajikan contoh program latihan fisik di rumah tanpa alat khusus (*calisthenics/bodyweight training*).</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check text-volt"></i>
+                    <div><strong>Tabel Skala Borg RPE Visual:</strong> Mempermudah siswa menilai tingkat kelelahan pribadi dari skala 6 (sangat ringan) hingga 20 (sangat berat).</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sub-analysis-block">
+                <span class="sub-title-badge badge-kekurangan"><i class="fa-solid fa-minus"></i> KEKURANGAN MATERI</span>
+                <ul class="analysis-content-list">
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Aspek Nutrisi:</strong> Pembahasan asupan makronutrisi dan mikronutrisi masih bersifat pengantar umum.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-triangle-exclamation text-red"></i>
+                    <div><strong>Variasi Kasus Khusus:</strong> Belum mencakup panduan latihan spesifik bagi siswa dengan riwayat asma atau obesitas secara terperinci.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. KAJIAN TEORI -->
+            <div class="analysis-card reveal">
+              <span class="analysis-number-watermark">03</span>
+              <div class="analysis-icon-box"><i class="fa-solid fa-book-bookmark"></i></div>
+              <h3>Kajian Teori</h3>
+              <div class="analysis-card-sub">Prinsip Desain Pesan Instruksional</div>
+              
+              <div class="theory-tag">
+                <div class="theory-name">FITT Principle of Exercise Prescription (ACSM)</div>
+                <div class="theory-desc">Materi mengacu pada panduan baku American College of Sports Medicine mengenai Frekuensi, Intensitas, Durasi (Time), dan Jenis (Type) latihan kebugaran.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">General Adaptation Syndrome (Hans Selye)</div>
+                <div class="theory-desc">Konsep pembebanan latihan progresif (*progressive overload*) dan fase pemulihan (*recovery*) agar tubuh mengalami superkompensasi positif.</div>
+              </div>
+
+              <div class="theory-tag">
+                <div class="theory-name">Health Belief Model (Rosenstock)</div>
+                <div class="theory-desc">Penyajian materi bahaya sedentari (kurang gerak) menumbuhkan persepsi kerentanan dan memicu kesadaran internal untuk aktif berolahraga.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+    <!-- ROADMAP / EVOLUTION SUMMARY -->
+    <section class="roadmap-section">
+      <div class="container">
+        <div class="section-headline reveal">
+          <span class="badge-sport">PETA EVOLUSI BAHAN AJAR</span>
+          <h2>TRANSFORMASI MATERI <span class="text-volt">4 SIKLUS PPL MANDIRI</span></h2>
+          <p>Perkembangan penyusunan materi ajar dari evaluasi UTS (Siklus 1) menuju materi komprehensif UAS (Siklus 2, 3, dan 4)</p>
+          <div class="header-line-center"></div>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- SIKLUS 1 -->
+          <div class="roadmap-step highlight-uts reveal">
+            <span class="roadmap-badge badge-uts">UTS • SIKLUS 1</span>
+            <h4>FONDASI VISUAL</h4>
+            <p><strong>Fokus:</strong> Bahan ajar infografis dasar bola basket.</p>
+            <p><strong>Refleksi:</strong> Gambar statis perlu disederhanakan; penambahan tabel troubleshooting gerak sangat membantu murid.</p>
+          </div>
+
+          <!-- SIKLUS 2 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 2</span>
+            <h4>EDUKASI ANATOMIS</h4>
+            <p><strong>Fokus:</strong> Penjelasan perkenaan bola voli ramah pemula.</p>
+            <p><strong>Refleksi:</strong> Penjelasan sudut perkenaan lengan berhasil mematahkan rasa takut sakit pada lengan siswa.</p>
+          </div>
+
+          <!-- SIKLUS 3 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 3</span>
+            <h4>LITERASI TAKTIS</h4>
+            <p><strong>Fokus:</strong> Konsep spasial segitiga passing sepak bola.</p>
+            <p><strong>Refleksi:</strong> Siswa memahami 'kapan' dan 'kemana' harus mengoper bola, bukan hanya sekadar menendang kuat.</p>
+          </div>
+
+          <!-- SIKLUS 4 -->
+          <div class="roadmap-step highlight-uas reveal">
+            <span class="roadmap-badge badge-uas">UAS • SIKLUS 4</span>
+            <h4>EDUKASI SEUMUR HIDUP</h4>
+            <p><strong>Fokus:</strong> Monitoring denyut nadi & FITT kebugaran.</p>
+            <p><strong>Refleksi:</strong> Materi memberikan dampak jangka panjang bagi kesiapan kerja fisik siswa SMK di masa depan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SPORTY -->
+    <footer class="footer-sport">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2 class="footer-logo">PPG <span class="text-volt">UNY.</span></h2>
+            <p>Mendidik dengan hati, bergerak dengan inovasi. Rekam jejak akademik guru PJOK masa depan.</p>
+            <div class="social-sport">
+              <a href="https://www.instagram.com/padlanholik/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:padlanholik2001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>JEJAK PPL 1</h3>
+            <a href="../PPL_1/profil.html">Profil Mahasiswa</a>
+            <a href="../PPL_1/artefak.html">Artefak Produk</a>
+            <a href="../PPL_1/penilaian.html">Penilaian GP</a>
+            <a href="../PPL_1/modelguru.html">Model Guru</a>
+          </div>
+
+          <div class="footer-links">
+            <h3>JEJAK PPL 2</h3>
+            <a href="rancangan.html">Rancangan Pembelajaran</a>
+            <a href="materi.html">Materi Pembelajaran</a>
+            <a href="media.html">Media Pembelajaran</a>
+            <a href="video.html">Video Pembelajaran</a>
+            <a href="instrumen.html">Instrumen Pembelajaran</a>
+            <a href="non-mengajar.html">Kegiatan Non-Mengajar</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>INFO & KONTAK</h3>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot text-volt"></i>
+              <div>
+                <span class="contact-label">LOKASI LPTK</span>
+                <p>FIK Universitas Negeri Yogyakarta</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope text-volt"></i>
+              <div>
+                <span class="contact-label">EMAIL AKADEMIK</span>
+                <p>padlanholik2001@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="../index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">BERANDA</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../filosofi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">FILOSOFI</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../refleksi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">REFLEKSI</a>
+            <span style="color: var(--text-dim);">•</span>
+            <a href="../dokumentasi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">DOKUMENTASI</a>
+          </div>
+          <p>© 2026 E-Portofolio PPG UNY | Dirancang oleh Padlan Holik</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT LOGIKA -->
+    <script>
+      function switchSiklus(evt, panelId) {
+        const panels = document.querySelectorAll(".cycle-panel");
+        panels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
+
+        const buttons = document.querySelectorAll(".cycle-tab-btn");
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        const selectedPanel = document.getElementById(panelId);
+        if (selectedPanel) {
+          selectedPanel.classList.add("active");
+        }
+
+        evt.currentTarget.classList.add("active");
+        triggerReveal();
+      }
+
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+      mobileMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        const icon = mobileMenu.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.className = "fa-solid fa-xmark";
+        } else {
+          icon.className = "fa-solid fa-bars-staggered";
+        }
+      });
+
+      function triggerReveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 60) {
+            element.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", triggerReveal);
+      window.addEventListener("load", triggerReveal);
+    </script>
+  </body>
+</html>
