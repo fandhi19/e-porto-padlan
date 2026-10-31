@@ -7,11 +7,311 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/rancangan.css" />
     <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+
+    <style>
+      /* DEDICATED STYLES FOR KEGIATAN NON-MENGAJAR */
+      .non-mengajar-stats {
+        margin-top: -40px;
+        margin-bottom: 70px;
+        position: relative;
+        z-index: 10;
+      }
+      .stat-grid-sport {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .stat-card-sport {
+        background: var(--bg-card);
+        border: 2px solid rgba(255, 255, 255, 0.06);
+        padding: 25px 20px;
+        position: relative;
+        overflow: hidden;
+        transition: var(--transition);
+      }
+      .stat-card-sport:hover {
+        border-color: var(--volt);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      }
+      .stat-number {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        line-height: 1;
+        color: var(--volt);
+        margin-bottom: 6px;
+      }
+      .stat-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-main);
+        letter-spacing: 0.5px;
+      }
+      .stat-desc {
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        margin-top: 4px;
+      }
+
+      /* ACTIVITY CARDS SHOWCASE */
+      .activities-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 90px;
+      }
+      .activity-card {
+        background: var(--bg-card);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        overflow: hidden;
+        transition: var(--transition);
+        position: relative;
+      }
+      .activity-card:hover {
+        border-color: rgba(204, 255, 0, 0.4);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+      }
+      .activity-grid {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        align-items: stretch;
+      }
+      .activity-grid.reverse {
+        grid-template-columns: 55% 45%;
+      }
+      .activity-grid.reverse .activity-media-pane {
+        order: 2;
+      }
+      .activity-grid.reverse .activity-info-pane {
+        order: 1;
+      }
+
+      /* MEDIA PANE (PHOTO) */
+      .activity-media-pane {
+        position: relative;
+        background: #000;
+        overflow: hidden;
+        min-height: 420px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .activity-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: block;
+      }
+      .activity-card:hover .activity-img {
+        transform: scale(1.05);
+      }
+      .media-watermark-tag {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(9, 10, 15, 0.85);
+        border: 1px solid var(--volt);
+        color: var(--volt);
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        font-family: var(--font-heading);
+        letter-spacing: 1px;
+        backdrop-filter: blur(5px);
+        z-index: 2;
+      }
+      .media-caption-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(9, 10, 15, 0.95), transparent);
+        padding: 30px 20px 15px;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 2;
+      }
+      .media-caption-bar i {
+        color: var(--volt);
+        margin-right: 6px;
+      }
+
+      /* INFO PANE (EXPLANATION & ANALYSIS) */
+      .activity-info-pane {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .activity-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .activity-category-badge {
+        font-size: 0.75rem;
+        font-weight: 800;
+        font-family: var(--font-heading);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--volt);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .activity-number-watermark {
+        font-family: var(--font-heading);
+        font-size: 2.8rem;
+        color: rgba(255, 255, 255, 0.05);
+        line-height: 1;
+      }
+      .activity-title {
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        color: #ffffff;
+        letter-spacing: 1px;
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+      .activity-lead {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-main);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .activity-full-desc {
+        font-size: 0.88rem;
+        color: var(--text-dim);
+        line-height: 1.7;
+        margin-bottom: 22px;
+      }
+      .activity-highlights {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 25px;
+        padding-left: 0;
+      }
+      .activity-highlights li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.86rem;
+        color: var(--text-main);
+        line-height: 1.5;
+      }
+      .activity-highlights li i {
+        color: var(--volt);
+        margin-top: 3px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+
+      /* REFLECTION CALLOUT BOX */
+      .activity-reflection-callout {
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 3px solid var(--volt);
+        padding: 14px 18px;
+        margin-bottom: 22px;
+        font-size: 0.83rem;
+        color: var(--text-dim);
+        font-style: italic;
+        line-height: 1.6;
+      }
+      .activity-reflection-callout strong {
+        color: var(--volt);
+        font-style: normal;
+        display: block;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        font-family: var(--font-heading);
+        letter-spacing: 0.5px;
+      }
+
+      /* COMPETENCY PILLS FOOTER */
+      .activity-footer-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 18px;
+        border-top: 1px dashed rgba(255, 255, 255, 0.08);
+      }
+      .competency-pills-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .comp-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-dim);
+      }
+      .comp-pill.active-pill {
+        border-color: rgba(204, 255, 0, 0.4);
+        color: var(--volt);
+        background: rgba(204, 255, 0, 0.06);
+      }
+
+      @media (max-width: 1024px) {
+        .stat-grid-sport {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .activity-grid,
+        .activity-grid.reverse {
+          grid-template-columns: 1fr;
+        }
+        .activity-grid.reverse .activity-media-pane {
+          order: 1;
+        }
+        .activity-grid.reverse .activity-info-pane {
+          order: 2;
+        }
+        .activity-media-pane {
+          min-height: 300px;
+        }
+        .activity-info-pane {
+          padding: 30px 24px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .stat-grid-sport {
+          grid-template-columns: 1fr;
+        }
+        .activity-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="tactical-grid"></div>
 
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="../index.html" class="nav-brand">
@@ -52,48 +352,340 @@
       </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="hero-section">
       <div class="hero-bg-text">NON-MENGAJAR</div>
-      <div class="container hero-grid">
+      <div class="container">
         <div class="hero-content reveal">
-          <div class="badge-sport"><i class="fa-solid fa-users-gear"></i> MANAJEMEN & KONTRIBUSI SEKOLAH</div>
+          <div class="badge-sport"><i class="fa-solid fa-users-gear"></i> MANAJEMEN & KONTRIBUSI SEKOLAH MITRA</div>
           <h1 class="hero-title">
             KEGIATAN <br />
-            <span class="text-volt">NON-MENGAJAR</span>
+            <span class="text-volt line-through">NON-MENGAJAR</span>
           </h1>
-          <p class="hero-desc">Partisipasi aktif dan kontribusi nyata dalam kegiatan manajerial sekolah mitra, pembinaan ekstrakurikuler olahraga, piket harian, dan kegiatan komunitas sekolah selama masa PPL 2.</p>
+          <p class="hero-desc">
+            Dokumentasi keterlibatan aktif, peran manajerial, dan kontribusi nyata dalam ekosistem sekolah selama melaksanakan <strong>PPL Mandiri (PPL 2)</strong> di <strong>SMK Negeri 3 Kasihan</strong>. Menampilkan 4 pilar pengabdian sekolah mitra: <strong>Pengawasan ASTS</strong>, <strong>Pameran Karya Siswa SMK</strong>, <strong>Jalan Sehat HUT Sekolah</strong>, dan <strong>Peringatan HUT SMK Negeri 3 Kasihan</strong>.
+          </p>
         </div>
       </div>
     </header>
 
-    <section class="competencies slanted-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>KONTRIBUSI <span class="text-volt">EKOSISTEM SEKOLAH</span></h2>
-          <div class="header-line"></div>
-          <p style="color: var(--text-dim); margin-top: 15px;">Aktivitas pendukung di luar jam pembelajaran yang memperkaya pengalaman profesional calon pendidik.</p>
+    <!-- SUMMARY STATS BAR -->
+    <section class="container non-mengajar-stats reveal">
+      <div class="stat-grid-sport">
+        <div class="stat-card-sport">
+          <div class="stat-number">04</div>
+          <div class="stat-label">Kegiatan Utama</div>
+          <div class="stat-desc">Manajerial, Akademik, Sosial, & Budaya</div>
         </div>
-
-        <div class="comp-grid">
-          <div class="comp-card reveal">
-            <h1 class="comp-number">01</h1>
-            <h3>PEMBINAAN EKSTRAKURIKULER</h3>
-            <p>Pendampingan dan pelatihan cabang olahraga prestasi peserta didik di sekolah mitra.</p>
-          </div>
-          <div class="comp-card card-volt reveal">
-            <h1 class="comp-number text-dark">02</h1>
-            <h3 class="text-dark">PIKET & TATA TERTIB</h3>
-            <p class="text-dark">Pelaksanaan piket harian sekolah, pengawasan kedisiplinan, dan penyambutan siswa.</p>
-          </div>
-          <div class="comp-card reveal">
-            <h1 class="comp-number">03</h1>
-            <h3>KEGIATAN SOSIAL & UPACARA</h3>
-            <p>Keterlibatan dalam upacara bendera, perayaan hari besar, dan kegiatan bakti lingkungan sekolah.</p>
-          </div>
+        <div class="stat-card-sport">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Dedikasi Lapangan</div>
+          <div class="stat-desc">Keterlibatan penuh seluruh agenda mitra</div>
+        </div>
+        <div class="stat-card-sport">
+          <div class="stat-number">SMKN 3</div>
+          <div class="stat-label">Kasihan Bantul</div>
+          <div class="stat-desc">Sekolah Menengah Kejuruan Seni Budaya</div>
+        </div>
+        <div class="stat-card-sport">
+          <div class="stat-number">4 PILAR</div>
+          <div class="stat-label">Kompetensi Guru</div>
+          <div class="stat-desc">Pedagogik, Kepribadian, Sosial, Profesional</div>
         </div>
       </div>
     </section>
 
+    <!-- MAIN SHOWCASE SECTION -->
+    <main class="container">
+      <div class="section-headline reveal" style="text-align: left; margin-bottom: 40px">
+        <span class="badge-sport">REKAM JEJAK KONTRIBUSI NYATA</span>
+        <h2>DOKUMENTASI <span class="text-volt">4 KEGIATAN NON-MENGAJAR</span></h2>
+        <p>Aktivitas pendukung di luar jam mengajar tatap muka yang mematangkan kematangan sosial dan profesional calon pendidik</p>
+        <div class="header-line" style="margin: 15px 0 0"></div>
+      </div>
+
+      <div class="activities-wrapper">
+
+        <!-- ==============================================
+             KEGIATAN 1: MENGAWAS ASTS
+             ============================================== -->
+        <article class="activity-card reveal" id="kegiatan-asts">
+          <div class="activity-grid">
+            <div class="activity-media-pane">
+              <!-- Foto Dokumentasi Mengawas ASTS -->
+              <img src="../IMG/pengawas pts.jpg" alt="Dokumentasi Mengawas ASTS SMK Negeri 3 Kasihan" class="activity-img" />
+              <div class="media-watermark-tag"><i class="fa-solid fa-clipboard-check"></i> AGENDA 01</div>
+              <div class="media-caption-bar">
+                <span><i class="fa-solid fa-camera"></i> Dokumentasi Pengawasan Ujian ASTS</span>
+                <span>Fase E & F • SMKN 3 Kasihan</span>
+              </div>
+            </div>
+
+            <div class="activity-info-pane">
+              <div>
+                <div class="activity-header-top">
+                  <div class="activity-category-badge">
+                    <i class="fa-solid fa-file-pen text-volt"></i> EVALUASI & AKADEMIK SEKOLAH
+                  </div>
+                  <span class="activity-number-watermark">01</span>
+                </div>
+
+                <h3 class="activity-title">MENGAWAS ASESMEN SUMATIF TENGAH SEMESTER (ASTS)</h3>
+
+                <p class="activity-lead">
+                  Keterlibatan langsung dalam kepanitiaan dan pengawasan ruang Asesmen Sumatif Tengah Semester (ASTS) guna memastikan kelancaran evaluasi pembelajaran kurikulum merdeka yang berintegritas tinggi.
+                </p>
+
+                <p class="activity-full-desc">
+                  Pelaksanaan ASTS di SMK Negeri 3 Kasihan merupakan agenda rutin evaluasi capaian belajar siswa pada pertengahan semester. Sebagai mahasiswa PPL Mandiri, keterlibatan sebagai pengawas ruang ujian melatih tanggung jawab manajerial, penerapan tata tertib secara disiplin dan humanis, serta menjaga atmosfer ujian yang tenang, adil, dan bebas dari segala bentuk kecurangan akademik.
+                </p>
+
+                <ul class="activity-highlights">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Penegakan Integritas Ruang Ujian:</strong> Memeriksa kartu identitas peserta, memastikan meja bersih dari catatan terlarang, serta mengawasi ketertiban ruang kelas selama durasi 90 menit ujian.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Administrasi & Berita Acara:</strong> Mendistribusikan berkas lembar soal dan lembar jawab, memverifikasi daftar presensi siswa, serta menandatangani Berita Acara Resmi ASTS sekolah.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Pelayanan Siswa Susulan:</strong> Berkoordinasi dengan panitia ujian kurikulum sekolah dalam mendata siswa yang berhalangan hadir karena sakit untuk penjadwalan asesmen susulan.</div>
+                  </li>
+                </ul>
+
+                <div class="activity-reflection-callout">
+                  <strong><i class="fa-solid fa-quote-left"></i> Refleksi Nilai Pendidik:</strong>
+                  "Mengawas ujian bukan sekadar menjaga heningnya ruangan, melainkan wujud penanaman nilai kejujuran dan keadilan akademik. Calon guru belajar menegakkan regulasi secara tegas namun tetap ramah bagi kenyamanan psikologis peserta didik."
+                </div>
+              </div>
+
+              <div class="activity-footer-meta">
+                <div class="competency-pills-group">
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Kompetensi Kepribadian</span>
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Kompetensi Sosial</span>
+                  <span class="comp-pill"><i class="fa-solid fa-check"></i> Manajerial Ujian</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-dim)"><i class="fa-regular fa-calendar-check text-volt"></i> Semester Berjalan PPL 2</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             KEGIATAN 2: PAMERAN SMK NEGERI 3 KASIHAN
+             ============================================== -->
+        <article class="activity-card reveal" id="kegiatan-pameran">
+          <div class="activity-grid reverse">
+            <div class="activity-media-pane">
+              <!-- Foto Dokumentasi Pameran SMKN 3 Kasihan -->
+              <img src="../IMG/pameran smsr.jpg" alt="Dokumentasi Gelar Pameran SMK Negeri 3 Kasihan" class="activity-img" />
+              <div class="media-watermark-tag"><i class="fa-solid fa-palette"></i> AGENDA 02</div>
+              <div class="media-caption-bar">
+                <span><i class="fa-solid fa-camera"></i> Pameran Karya Seni & Kejuruan Siswa</span>
+                <span>Galeri Seni SMKN 3 Kasihan</span>
+              </div>
+            </div>
+
+            <div class="activity-info-pane">
+              <div>
+                <div class="activity-header-top">
+                  <div class="activity-category-badge">
+                    <i class="fa-solid fa-masks-theater text-volt"></i> KREASI VOKASI & APRESIASI SENI
+                  </div>
+                  <span class="activity-number-watermark">02</span>
+                </div>
+
+                <h3 class="activity-title">PAMERAN KARYA SMK NEGERI 3 KASIHAN</h3>
+
+                <p class="activity-lead">
+                  Dukungan manajerial dan kolaborasi lintas disiplin dalam perhelatan Pameran Karya Seni & Kejuruan siswa SMK Negeri 3 Kasihan sebagai etalase karya kreatif berbasis *Project-Based Learning (PjBL)* dan *Teaching Factory (TeFa)*.
+                </p>
+
+                <p class="activity-full-desc">
+                  SMK Negeri 3 Kasihan dikenal sebagai salah satu episentrum pendidikan kejuruan seni dan budaya di Yogyakarta. Pameran karya siswa merupakan ajang puncak apresiasi publik terhadap inovasi siswa di berbagai jurusan (seni tari, karawitan, pedalangan, teater, seni lukis, dan kriya). Sebagai calon guru PJOK, keterlibatan dalam kepanitiaan pameran ini memperkaya wawasan tentang ekosistem sekolah seni dan kolaborasi interdisipliner.
+                </p>
+
+                <ul class="activity-highlights">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Penataan Stand & Instalasi Galeri:</strong> Membantu penataan tata ruang pameran, penataan pencahayaan stan karya seni rupa, dan pengaturan jalur sirkulasi pengunjung publik.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Pendampingan Siswa Pameris:</strong> Memfasilitasi siswa saat mempresentasikan makna filosofis karyanya di hadapan tamu undangan, orang tua wali, dan mitra DUDI.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Manajemen Pengamanan Karya:</strong> Menjaga ketertiban area galeri dan mengamankan properti instrumen kesenian bernilai tinggi selama perhelatan berlangsung.</div>
+                  </li>
+                </ul>
+
+                <div class="activity-reflection-callout">
+                  <strong><i class="fa-solid fa-quote-left"></i> Refleksi Nilai Pendidik:</strong>
+                  "Menghadiri dan mendukung pameran karya siswa menumbuhkan kepekaan estetika bagi guru olahraga. Kita menyadari bahwa kecerdasan kinestetik di lapangan olahraga bersinergi harmonis dengan kepekaan rasa dan daya cipta seni siswa kejuruan."
+                </div>
+              </div>
+
+              <div class="activity-footer-meta">
+                <div class="competency-pills-group">
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Kompetensi Sosial</span>
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Apresiasi Vokasi</span>
+                  <span class="comp-pill"><i class="fa-solid fa-check"></i> Manajemen Acara</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-dim)"><i class="fa-regular fa-calendar-check text-volt"></i> Agenda Tahunan Sekolah</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             KEGIATAN 3: JALAN SEHAT HUT SMKN 3 KASIHAN
+             ============================================== -->
+        <article class="activity-card reveal" id="kegiatan-jalan-sehat">
+          <div class="activity-grid">
+            <div class="activity-media-pane">
+              <!-- Foto Dokumentasi Jalan Sehat HUT SMKN 3 Kasihan -->
+              <img src="../IMG/Jalan Sehat.png" alt="Dokumentasi Jalan Sehat HUT SMK Negeri 3 Kasihan" class="activity-img" />
+              <div class="media-watermark-tag"><i class="fa-solid fa-person-walking"></i> AGENDA 03</div>
+              <div class="media-caption-bar">
+                <span><i class="fa-solid fa-camera"></i> Jalan Sehat Massal Warga Sekolah</span>
+                <span>Rute Kawasan Kasihan Bantul</span>
+              </div>
+            </div>
+
+            <div class="activity-info-pane">
+              <div>
+                <div class="activity-header-top">
+                  <div class="activity-category-badge">
+                    <i class="fa-solid fa-heart-pulse text-volt"></i> KEBUGARAN KOMUNITAS & GERAK MASSAL
+                  </div>
+                  <span class="activity-number-watermark">03</span>
+                </div>
+
+                <h3 class="activity-title">JALAN SEHAT HUT SMK NEGERI 3 KASIHAN</h3>
+
+                <p class="activity-lead">
+                  Penerapan kepakaran bidang PJOK dalam kepanitiaan Jalan Sehat Akbar memperingati HUT SMKN 3 Kasihan, memimpin pemanasan massal, pengawalan rute, serta penjaminan keselamatan gerak seluruh warga sekolah.
+                </p>
+
+                <p class="activity-full-desc">
+                  Jalan Sehat HUT merupakan agenda kebugaran massal yang menyatukan seluruh elemen sekolah: siswa, pendidik, tenaga kependidikan, alumni, dan komite. Mahasiswa PPL PJOK memegang peranan krusial sebagai garda terdepan manajemen aktivitas fisik, mulai dari merancang rute jelajah yang aman di pedesaan Kasihan, memimpin pemanasan bersama di lapangan, hingga mengelola pos hidrasi dan pertolongan pertama (P3K).
+                </p>
+
+                <ul class="activity-highlights">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Instruktur Senam Pemanasan:</strong> Memimpin senam aerobik peregangan dinamis di lapangan utama sebelum bendera start dikibarkan oleh Kepala Sekolah.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Route Marshal & Keselamatan Jalan:</strong> Berjaga di persimpangan jalan protokol untuk mengatur arus lalu lintas kendaraan dan memastikan barisan siswa berjalan tertib.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Pos Hidrasi & Tanggap Darurat P3K:</strong> Siap siaga mendampingi siswa yang mengalami kram otot, kelelahan, atau dehidrasi ringan selama menempuh rute 4 km.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Manajemen Doorprize & Panggung:</strong> Mengkoordinasikan pembagian kupon undian jalan sehat di titik pos tengah dan mengawal pengundian hadiah kebugaran.</div>
+                  </li>
+                </ul>
+
+                <div class="activity-reflection-callout">
+                  <strong><i class="fa-solid fa-quote-left"></i> Refleksi Nilai Pendidik:</strong>
+                  "Jalan sehat mengaktualisasikan moto 'Sport for All'—olahraga untuk kegembiraan dan kebersamaan. Calon guru PJOK membuktikan kompetensi kepemimpinannya dalam mengelola keselamatan gerak ratusan peserta secara terstruktur dan penuh empati."
+                </div>
+              </div>
+
+              <div class="activity-footer-meta">
+                <div class="competency-pills-group">
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Kompetensi Profesional PJOK</span>
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Manajemen Risiko Fisik</span>
+                  <span class="comp-pill"><i class="fa-solid fa-check"></i> Kepemimpinan Komunitas</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-dim)"><i class="fa-regular fa-calendar-check text-volt"></i> Rangkaian Milad SMKN 3</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             KEGIATAN 4: PERINGATAN HUT SMKN 3 KASIHAN
+             ============================================== -->
+        <article class="activity-card reveal" id="kegiatan-hut-smk">
+          <div class="activity-grid reverse">
+            <div class="activity-media-pane">
+              <!-- Foto Dokumentasi HUT SMKN 3 Kasihan (Upacara & Resepsi) -->
+              <img src="../IMG/HUT SMSR .jpg" alt="Dokumentasi Peringatan HUT SMK Negeri 3 Kasihan" class="activity-img" />
+              <div class="media-watermark-tag"><i class="fa-solid fa-cake-candles"></i> AGENDA 04</div>
+              <div class="media-caption-bar">
+                <span><i class="fa-solid fa-camera"></i> Upacara & Resepsi Perayaan HUT Sekolah</span>
+                <span>Halaman Utama SMKN 3 Kasihan</span>
+              </div>
+            </div>
+
+            <div class="activity-info-pane">
+              <div>
+                <div class="activity-header-top">
+                  <div class="activity-category-badge">
+                    <i class="fa-solid fa-landmark-dome text-volt"></i> TRADISI, SEREMONIAL & BUDAYA SEKOLAH
+                  </div>
+                  <span class="activity-number-watermark">04</span>
+                </div>
+
+                <h3 class="activity-title">PERINGATAN HUT SMK NEGERI 3 KASIHAN</h3>
+
+                <p class="activity-lead">
+                  Partisipasi aktif dalam rangkaian upacara seremonial bernuansa adat tradisi Jawa, tumpengan syukuran, orasi kebudayaan, serta pendampingan pertunjukan seni perayaan milad SMK Negeri 3 Kasihan.
+                </p>
+
+                <p class="activity-full-desc">
+                  Puncak Peringatan Hari Ulang Tahun SMK Negeri 3 Kasihan dirayakan dengan kekhidmatan upacara adat gagrak Yogyakarta, pemotongan tumpeng berkah, orasi budaya pimpinan sekolah, serta penampilan mahakarya tari kolosal dan konser gamelan siswa. Sebagai bagian dari keluarga besar sekolah mitra, mahasiswa PPL terlibat langsung dalam kepanitiaan protokoler resepsi, penataan barisan seremonial, dan pengawalan ketertiban acara.
+                </p>
+
+                <ul class="activity-highlights">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Partisipasi Busana Tradisi Jawa:</strong> Mengenakan busana adat Jawa (surjan/kebaya) sebagai wujud penghormatan terhadap marwah budaya SMKN 3 Kasihan (SMKI Yogyakarta).</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Protokoler & Penerimaan Tamu:</strong> Membantu penyambutan tamu kehormatan dari Dinas Pendidikan, para sesepuh seniman, komite sekolah, dan asosiasi alumni.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Pengondisian Barisan & Panggung:</strong> Mengatur ketertiban ratusan siswa selama jalannya upacara khidmat dan transisi penampilan tarian kolosal di panggung pentas.</div>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div><strong>Ramah Tamah & Tumpengan:</strong> Berbaur erat dalam doa syukur dan makan tumpeng bersama guru pamong, memperkuat ikatan silaturahmi akademik dan kekeluargaan.</div>
+                  </li>
+                </ul>
+
+                <div class="activity-reflection-callout">
+                  <strong><i class="fa-solid fa-quote-left"></i> Refleksi Nilai Pendidik:</strong>
+                  "Menjadi guru seutuhnya berarti meresapi jiwa dan kultur sekolah tempat kita mengabdi. Melalui perayaan HUT ini, calon pendidik mematangkan karakter kebangsaan, kearifan lokal, serta rasa memiliki terhadap institusi pendidikan tempat bertumbuh."
+                </div>
+              </div>
+
+              <div class="activity-footer-meta">
+                <div class="competency-pills-group">
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Kematangan Sosio-Kultural</span>
+                  <span class="comp-pill active-pill"><i class="fa-solid fa-check-double"></i> Karakter Kebangsaan</span>
+                  <span class="comp-pill"><i class="fa-solid fa-check"></i> Jiwa Korsa Sekolah</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-dim)"><i class="fa-regular fa-calendar-check text-volt"></i> Puncak Milad Sekolah</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- FOOTER SPORTY -->
     <footer class="footer-sport">
       <div class="container">
         <div class="footer-grid">
@@ -144,22 +736,23 @@
         </div>
 
         <div class="footer-bottom">
-          <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <a href="../index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">BERANDA</a>
-            <span style="color: var(--text-dim);">•</span>
-            <a href="../filosofi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">FILOSOFI</a>
-            <span style="color: var(--text-dim);">•</span>
-            <a href="../refleksi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">REFLEKSI</a>
-            <span style="color: var(--text-dim);">•</span>
-            <a href="../dokumentasi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;">DOKUMENTASI</a>
+          <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap">
+            <a href="../index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem">BERANDA</a>
+            <span style="color: var(--text-dim)">•</span>
+            <a href="../filosofi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem">FILOSOFI</a>
+            <span style="color: var(--text-dim)">•</span>
+            <a href="../refleksi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem">REFLEKSI</a>
+            <span style="color: var(--text-dim)">•</span>
+            <a href="../dokumentasi.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem">DOKUMENTASI</a>
           </div>
           <p>© 2026 E-Portofolio PPG UNY | Dirancang oleh Padlan Holik</p>
         </div>
       </div>
     </footer>
 
+    <!-- SCRIPT LOGIKA -->
     <script>
-      // Scroll Effect Navbar
+      // 1. Scroll Effect Navbar
       window.addEventListener("scroll", () => {
         const nav = document.getElementById("navbar");
         if (window.scrollY > 50) {
@@ -169,20 +762,26 @@
         }
       });
 
-      // Mobile Menu
+      // 2. Mobile Menu Toggle
       const mobileMenu = document.getElementById("mobile-menu");
       const navMenu = document.getElementById("nav-menu");
       mobileMenu.addEventListener("click", () => {
         navMenu.classList.toggle("active");
+        const icon = mobileMenu.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.className = "fa-solid fa-xmark";
+        } else {
+          icon.className = "fa-solid fa-bars-staggered";
+        }
       });
 
-      // Scroll Reveal Animation
+      // 3. Scroll Reveal Animation
       function triggerReveal() {
         const reveals = document.querySelectorAll(".reveal");
         reveals.forEach((el) => {
           const windowHeight = window.innerHeight;
           const elementTop = el.getBoundingClientRect().top;
-          if (elementTop < windowHeight - 80) {
+          if (elementTop < windowHeight - 60) {
             el.classList.add("active");
           }
         });
@@ -192,4 +791,3 @@
     </script>
   </body>
 </html>
-

@@ -739,25 +739,45 @@ h4 {
   border-left: 3px solid var(--red-action);
 }
 
-/* Teori Card Tag */
+/* Teori Card Tag Container & Badges */
+.theory-tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  align-items: center;
+}
+
 .theory-tag {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  font-size: 0.85rem;
-}
-.theory-name {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: rgba(204, 255, 0, 0.08);
   color: var(--volt);
-  letter-spacing: 1px;
-  margin-bottom: 4px;
+  border: 1px solid rgba(204, 255, 0, 0.28);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.3;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
-.theory-desc {
-  color: var(--text-dim);
-  font-size: 0.82rem;
-  line-height: 1.5;
+
+.theory-tag:hover {
+  background: var(--volt);
+  color: var(--bg-dark);
+  border-color: var(--volt);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(204, 255, 0, 0.35);
 }
 
 /* === ROADMAP / EVOLUTION SUMMARY (KOMPARASI 4 SIKLUS) === */
